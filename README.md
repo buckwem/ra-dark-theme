@@ -1,6 +1,6 @@
 # RA Dark Theme
 
-A standalone Gantry template is now available as a local **0.2.0-beta1** build
+A standalone Gantry template is now available as a local **0.2.0-beta2** build
 for Alton Ramblers. See [Gantry template installation](docs/gantry-template.md).
 The plugin described below is the earlier distribution; disable it when using
 the template. The template builder uses an administrator-supplied Hydrogen ZIP

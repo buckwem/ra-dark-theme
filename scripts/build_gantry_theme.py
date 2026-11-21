@@ -10,7 +10,7 @@ import shutil
 import xml.etree.ElementTree as ET
 from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
-VERSION = '0.2.0-beta1'
+VERSION = '0.2.0-beta2'
 NAME = 'ra_darktheme'
 ROOT = Path(__file__).resolve().parents[1]
 

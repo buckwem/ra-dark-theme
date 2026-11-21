@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.0-beta2 template (21 November 2026)
+
+- Use absolute asset URLs to avoid Joomla prefixing root-relative template asset paths with a second slash.
+
+
 ## 0.2.0-beta1 template (21 November 2026)
 
 - Added a standalone Gantry template builder using the administrator-supplied Hydrogen template.

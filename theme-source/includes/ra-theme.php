@@ -10,7 +10,7 @@ $document = $app->getDocument();
 $params = $app->getTemplate(true)->params;
 $default = (string) $params->get('ra_default_theme', 'system');
 $default = in_array($default, ['system', 'light', 'dark'], true) ? $default : 'system';
-$base = rtrim(Uri::root(true), '/') . '/templates/ra_darktheme/ra-assets/';
+$base = rtrim(Uri::root(), '/') . '/templates/ra_darktheme/ra-assets/';
 $document->addScriptOptions('plg_system_ra_darktheme', [
     'enabled' => true,
     'defaultTheme' => $default,

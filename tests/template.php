@@ -3,7 +3,7 @@ namespace Joomla\CMS {
     class Factory { public static $app; public static function getApplication() { return self::$app; } }
 }
 namespace Joomla\CMS\Uri {
-    class Uri { public static $root; public static function root($only) { return self::$root; } }
+    class Uri { public static $root; public static function root($only = false) { return self::$root; } }
 }
 namespace {
     define('_JEXEC', 1);
@@ -26,7 +26,7 @@ namespace {
         public function getTemplate($withParams) { return (object) ['params' => $this->params]; }
     }
     function expect($value, $message) { if (!$value) throw new \RuntimeException($message); }
-    foreach (['', '/', '/subdirectory', '/subdirectory/'] as $root) {
+    foreach (['https://example.org/', 'https://example.org/subdirectory/'] as $root) {
         foreach (['system', 'light', 'dark', 'invalid'] as $default) {
             $app = new App();
             $app->params->values = ['ra_default_theme' => $default, 'ra_show_toggle' => 0, 'ra_weather' => 0];
@@ -43,5 +43,5 @@ namespace {
             expect($app->doc->assets->scripts[1][4] === ['core', 'tpl_ra_darktheme.bootstrap'], 'Missing dependencies');
         }
     }
-    echo "Passed template settings and asset tests across four root paths.\n";
+    echo "Passed template settings and asset tests across root and subdirectory URLs.\n";
 }
