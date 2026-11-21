@@ -8,6 +8,15 @@ on Alton Ramblers and the compact sun/moon icons used by Prodockit.
 behaviour and package are checked locally; installation, update and removal on
 real Joomla installations remain required before a production release.
 
+## Download the beta
+
+Download the installable
+[RA Dark Theme 0.1.0-beta1 ZIP](https://github.com/buckwem/ra-dark-theme/releases/download/v0.1.0-beta1/plg_system_ra_darktheme-0.1.0-beta1.zip)
+from the [beta release](https://github.com/buckwem/ra-dark-theme/releases/tag/v0.1.0-beta1).
+The release also includes this README as a separate download.
+Use the named plugin ZIP when installing in Joomla; GitHub's automatic source
+archives contain the development project and are not Joomla installation packages.
+
 ## Names
 
 | Purpose | Name |
@@ -58,19 +67,21 @@ sample Joomla script options. It is a static preview, not a Joomla installation.
 
 ## Install on a staging site
 
-1. Upload the generated ZIP through **System → Install → Extensions**.
+1. Upload the downloaded or locally built plugin ZIP through **System → Install → Extensions**.
 2. Open **System → Manage → Plugins → System - RA Dark Theme** and enable it.
 3. Check the default theme, switch position and template folder. The template
    defaults to `g5_hydrogen`.
 4. Remove the earlier prototype CSS and switch before enabling this plugin,
    clear Joomla/template/browser caches, and review the pages on your site.
 
-See `docs/installation.md`, `docs/configuration.md` and `docs/testing.md` for
-scope, settings and the remaining integration checks.
+See the [installation guide](https://github.com/buckwem/ra-dark-theme/blob/v0.1.0-beta1/docs/installation.md),
+[configuration guide](https://github.com/buckwem/ra-dark-theme/blob/v0.1.0-beta1/docs/configuration.md)
+and [testing notes](https://github.com/buckwem/ra-dark-theme/blob/v0.1.0-beta1/docs/testing.md)
+for scope, settings and the remaining integration checks.
 
-## GitHub setup
+## Source and development
 
-The local Git repository starts on `main` and connects over SSH to
+The source is maintained on `main` in
 [the public repository](https://github.com/buckwem/ra-dark-theme).
 For a fresh clone:
 
@@ -80,9 +91,11 @@ cd ra-dark-theme
 make setup
 ```
 
-GitHub Actions is prepared to check PHP, JavaScript, packaging and documentation.
-No release, update server or public website deployment is configured yet. Add
-the documentation site URL to `zensical.toml` once that destination exists.
+GitHub Actions checks PHP, JavaScript, packaging and documentation.
+Beta installers are distributed through GitHub Releases. Updates currently use
+manual ZIP uploads in Joomla; there is no update server yet. The documentation
+source is available in this repository, but a public documentation website has
+not been deployed. Add its URL to `zensical.toml` once that destination exists.
 
 ## Licence
 
