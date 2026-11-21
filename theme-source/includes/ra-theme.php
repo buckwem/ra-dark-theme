@@ -7,16 +7,17 @@ use Joomla\CMS\Uri\Uri;
 
 $app = Factory::getApplication();
 $document = $app->getDocument();
-$params = $app->getTemplate(true)->params;
-$default = (string) $params->get('ra_default_theme', 'system');
+$theme->setLayout();
+$params = $gantry['config'];
+$default = (string) $params->get('page.ra-theme.default_theme', 'dark');
 $default = in_array($default, ['system', 'light', 'dark'], true) ? $default : 'system';
 $base = rtrim(Uri::root(), '/') . '/templates/ra_darktheme/ra-assets/';
 $document->addScriptOptions('plg_system_ra_darktheme', [
     'enabled' => true,
     'defaultTheme' => $default,
-    'showToggle' => (bool) $params->get('ra_show_toggle', 1),
+    'showToggle' => (bool) $params->get('page.ra-theme.show_toggle', 1),
     'position' => 'header',
-    'weather' => (bool) $params->get('ra_weather', 1),
+    'weather' => (bool) $params->get('page.ra-theme.weather', 1),
     'labels' => ['light' => 'Switch to light mode', 'dark' => 'Switch to dark mode'],
 ]);
 $assets = $document->getWebAssetManager();

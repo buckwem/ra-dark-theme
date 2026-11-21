@@ -1,0 +1,23 @@
+name: RA Dark Theme
+description: Light and dark appearance. Saved visitor choices override the default.
+type: global
+
+form:
+  fields:
+    default_theme:
+      type: select.select
+      label: Default theme
+      description: Appearance for visitors without a saved choice.
+      default: dark
+      options:
+        system: Device preference
+        light: Light
+        dark: Dark
+    show_toggle:
+      type: enable.enable
+      label: Show light/dark switch
+      default: 1
+    weather:
+      type: enable.enable
+      label: Match weather widget colours
+      default: 1

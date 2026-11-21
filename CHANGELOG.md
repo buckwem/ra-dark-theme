@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.0-beta3 template (21 November 2026)
+
+- Added native Gantry Page Settings controls for the default theme, switch and weather colours.
+- Set Dark as the initial template default and documented the webmaster workflow.
+
+
 ## 0.2.0-beta2 template (21 November 2026)
 
 - Use absolute asset URLs to avoid Joomla prefixing root-relative template asset paths with a second slash.

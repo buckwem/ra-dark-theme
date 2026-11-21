@@ -10,7 +10,7 @@ import shutil
 import xml.etree.ElementTree as ET
 from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
-VERSION = '0.2.0-beta2'
+VERSION = '0.2.0-beta3'
 NAME = 'ra_darktheme'
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -91,16 +91,14 @@ def build(archive, output):
         ET.SubElement(files, 'folder' if p.is_dir() else 'filename').text = p.name
     fieldset = xml.find('config/fields/fieldset')
     fieldset.set('label', 'RA Dark Theme')
-    field = ET.SubElement(fieldset, 'field', name='ra_default_theme', type='list', default='system', filter='cmd', label='Default theme', description='Saved visitor choices override this default.')
-    for value, label in [('system', 'Device preference'), ('light', 'Light'), ('dark', 'Dark')]:
-        ET.SubElement(field, 'option', value=value).text = label
-    for name, label in [('ra_show_toggle', 'Show light/dark switch'), ('ra_weather', 'Match weather widget colours')]:
-        field = ET.SubElement(fieldset, 'field', name=name, type='radio', default='1', filter='integer', label=label, layout='joomla.form.field.radio.switcher')
-        ET.SubElement(field, 'option', value='0').text = 'JNO'
-        ET.SubElement(field, 'option', value='1').text = 'JYES'
+    ET.SubElement(fieldset, 'field', name='ra_gantry_settings', type='note', label='Theme settings', description='Configure the default theme in Gantry: Page Settings, RA Dark Theme.')
     ET.indent(manifest, space='    ')
     manifest.write(target / 'templateDetails.xml', encoding='utf-8', xml_declaration=True)
 
+    # Gantry discovers Page Settings groups from blueprints/page/*.yaml.
+    page_blueprint = target / 'blueprints/page/ra-theme.yaml'
+    page_blueprint.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(ROOT / 'theme-source/blueprints/page/ra-theme.yaml', page_blueprint)
     # Include runtime assets directly in the template, without a system plugin.
     assets = target / 'ra-assets'
     shutil.copytree(ROOT / 'extension/media', assets)

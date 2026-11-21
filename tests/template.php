@@ -29,7 +29,9 @@ namespace {
     foreach (['https://example.org/', 'https://example.org/subdirectory/'] as $root) {
         foreach (['system', 'light', 'dark', 'invalid'] as $default) {
             $app = new App();
-            $app->params->values = ['ra_default_theme' => $default, 'ra_show_toggle' => 0, 'ra_weather' => 0];
+            $app->params->values = ['page.ra-theme.default_theme' => $default, 'page.ra-theme.show_toggle' => 0, 'page.ra-theme.weather' => 0];
+            $gantry = ['config' => $app->params];
+            $theme = new class { public function setLayout() {} };
             \Joomla\CMS\Factory::$app = $app;
             \Joomla\CMS\Uri\Uri::$root = $root;
             require __DIR__ . '/../theme-source/includes/ra-theme.php';
