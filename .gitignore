@@ -1,0 +1,16 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+.cache/
+.prodockit/
+site/
+dist/
+vendor/
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+.local-site/
+.test-output/

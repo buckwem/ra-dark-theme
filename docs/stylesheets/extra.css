@@ -1,0 +1,4 @@
+/* Project-specific documentation styles. Managed Prodockit styles load first. */
+:root {
+  --md-primary-fg-color: #176b62;
+}

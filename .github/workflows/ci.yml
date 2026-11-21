@@ -1,0 +1,51 @@
+name: Checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  php:
+    name: PHP syntax (${{ matrix.php }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['8.3', '8.4']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+      - run: make lint-php test-php
+
+  build:
+    name: Package and documentation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: requirements-docs.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: make test-js
+      - run: make setup
+      - run: make check package docs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ra-dark-theme-development-package
+          path: dist/*.zip
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ra-dark-theme-documentation
+          path: site/
+          if-no-files-found: error

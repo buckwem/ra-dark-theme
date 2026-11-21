@@ -1,0 +1,47 @@
+/* RA Dark Theme switch: 18-pixel icons with a 44-pixel pointer target. */
+.ra-title-tools {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 20px 0 0 120px;
+}
+.ra-title-tools #ramblerstitle { margin: 0; }
+#ra-theme-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  margin: 0;
+  padding: 6px;
+  color: #173c2a;
+  background: #eef5ef;
+  border: 1px solid #718e79;
+  border-radius: 50%;
+  cursor: pointer;
+  line-height: 1;
+}
+#ra-theme-toggle svg { display: block; width: 18px; height: 18px; flex: none; }
+/* Keep the pointer/touch target generous around the smaller visible button. */
+#ra-theme-toggle::after { content: ""; position: absolute; inset: -6px; border-radius: 50%; }
+#ra-theme-toggle:focus-visible { outline: 3px solid #b06000; outline-offset: 3px; }
+html[data-ra-theme="dark"] #ra-theme-toggle {
+  color: #f9b104;
+  background: #2b3830;
+  border-color: #718e79;
+}
+@media (max-width: 50.99rem) {
+  /* Leave space for the hamburger and keep the switch visible on narrow screens. */
+  .ra-title-tools { margin: 5px 0 0 55px; gap: 0.25rem 0.75rem; }
+  .ra-title-tools #ramblerstitle { padding-right: 0.25rem; }
+}
+@media print { #ra-theme-toggle { display: none; } }
+
+#ra-theme-toggle[data-position^="bottom-"] { position: fixed; bottom: 1rem; z-index: 10000; margin: 6px; }
+#ra-theme-toggle[data-position="bottom-right"] { right: 1rem; }
+#ra-theme-toggle[data-position="bottom-left"] { left: 1rem; }

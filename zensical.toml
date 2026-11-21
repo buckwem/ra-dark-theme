@@ -1,0 +1,56 @@
+[project]
+site_name = "RA Dark Theme"
+site_description = "User and developer documentation for the RA Dark Theme Joomla plugin."
+site_author = "Mark Buckwell"
+docs_dir = "docs"
+site_dir = "site"
+copyright = "Copyright © 2026 Mark Buckwell. GPL-2.0-or-later."
+repo_url = "https://github.com/buckwem/ra-dark-theme"
+repo_name = "buckwem/ra-dark-theme"
+edit_uri = "edit/main/docs/"
+# Set site_url when the documentation is published.
+nav = [
+  { "Overview" = "index.md" },
+  { "Installation" = "installation.md" },
+  { "Configuration" = "configuration.md" },
+  { "Development" = "development.md" },
+  { "Testing" = "testing.md" },
+]
+extra_css = ["stylesheets/pdk.css", "stylesheets/extra.css"]
+extra_javascript = ["javascripts/pdk.js"]
+
+[project.theme]
+language = "en"
+features = ["navigation.sections", "navigation.footer", "content.code.copy"]
+
+[[project.theme.palette]]
+scheme = "default"
+primary = "teal"
+accent = "amber"
+toggle.icon = "material/brightness-7"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+scheme = "slate"
+primary = "teal"
+accent = "amber"
+toggle.icon = "material/brightness-4"
+toggle.name = "Switch to light mode"
+
+[project.extra]
+heading_numbering = false
+pdf_extra_css = ["stylesheets/pdk-pdf.css"]
+
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.md_in_html]
+[project.markdown_extensions.tables]
+[project.markdown_extensions.toc]
+permalink = true
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+[project.markdown_extensions.pymdownx.superfences]
+[project.markdown_extensions."prodockit.headings"]
+[project.markdown_extensions."prodockit.tables"]
+[project.markdown_extensions."prodockit.tree"]

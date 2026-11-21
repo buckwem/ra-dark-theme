@@ -1,0 +1,327 @@
+@media screen {
+/*
+ * RA Dark Theme, based on the Alton Ramblers prototype, 21 November 2026.
+ * Standalone Gantry 5 Hydrogen / Ramblers module overrides.
+ * Load after the site's CSS; activate with data-ra-theme="dark" on <html>.
+ * Removing the attribute restores the original theme. No Festive Overlay dependency.
+ * Palette: Ramblers Mint Cake, Granite and Rosy Cheeks with dark green surfaces.
+ */
+html[data-ra-theme="dark"] {
+  color-scheme: dark;
+  --ra-page: #161d1a;
+  --ra-surface: #202b25;
+  --ra-raised: #2b3830;
+  --ra-text: #e7ede8;
+  --ra-muted: #bdc9c0;
+  --ra-link: #b5e0c2;
+  --ra-hover: #f6b09d;
+  --ra-border: #536b5b;
+  --ra-mint: #9bc8ab;
+  background: var(--ra-page);
+}
+
+html[data-ra-theme="dark"] :is(body, #g-page-surround, #g-main, #g-container-mainbody,
+  #g-sidebar1, #g-sidebar2, #g-showcase, #g-feature, #g-expanded, #g-top, #g-bottom,
+  #g-above, #g-fullwidth, #g-intro) {
+  color: var(--ra-text);
+  background-color: var(--ra-page);
+}
+
+html[data-ra-theme="dark"] :is(#g-header, #g-footer, #g-copyright) {
+  color: var(--ra-text);
+  background-color: var(--ra-surface);
+}
+
+html[data-ra-theme="dark"] #g-header { border-bottom: 1px solid var(--ra-border); }
+html[data-ra-theme="dark"] #ramblerstitle { color: var(--ra-text) !important; }
+
+/* Preserve the official logo's colours and black lettering on a light tile. */
+html[data-ra-theme="dark"] #ralogo {
+  background: #f3f6f0;
+  border-radius: 0.3rem;
+}
+
+html[data-ra-theme="dark"] :is(h1, h2, h3, h4, h5, h6, .g-title) {
+  color: var(--ra-mint);
+  text-shadow: none;
+}
+
+html[data-ra-theme="dark"] :is(#g-main, #g-sidebar1, #g-sidebar2, #g-fullwidth) [style*="color:"] {
+  color: var(--ra-text) !important;
+}
+html[data-ra-theme="dark"] :is(#g-main, #g-sidebar1, #g-sidebar2, #g-fullwidth)
+  :is(span, p, a, strong, b, em, i, h1, h2, h3, h4, h5, h6, figcaption)[style*="background-color:"] {
+  background-color: transparent !important;
+}
+html[data-ra-theme="dark"] figcaption {
+  color: var(--ra-muted);
+  background-color: transparent;
+}
+
+/* Existing article titles use green inline spans rather than heading elements. */
+html[data-ra-theme="dark"] #g-main :is([style*="#008000"], [style*="#339966"]) {
+  color: var(--ra-mint) !important;
+}
+
+html[data-ra-theme="dark"] a { color: var(--ra-link); }
+html[data-ra-theme="dark"] a:hover { color: var(--ra-hover); }
+html[data-ra-theme="dark"] a:visited { color: #cfbddf; }
+html[data-ra-theme="dark"] #g-copyright a { color: var(--ra-link); }
+html[data-ra-theme="dark"] #g-copyright a:hover { color: var(--ra-hover); }
+html[data-ra-theme="dark"] :is(#g-main, #g-sidebar1, #g-sidebar2) a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+html[data-ra-theme="dark"] :is(#g-main p, #g-sidebar1 li, #g-sidebar2 li) a {
+  text-decoration-line: underline;
+}
+
+/* Main navigation, dropdowns and Gantry's mobile menu. */
+html[data-ra-theme="dark"] :is(#g-navigation, #g-offcanvas, .g-dropdown, .g-sublevel,
+  .g-mobilemenu-container, #g-mobilemenu-container) {
+  background: var(--ra-surface);
+  color: var(--ra-text);
+}
+html[data-ra-theme="dark"] :is(#g-navigation, #g-offcanvas) .g-menu-item-container {
+  color: var(--ra-text);
+  background: transparent;
+}
+html[data-ra-theme="dark"] :is(#g-navigation, #g-offcanvas) :is(.active, .g-selected) > .g-menu-item-container,
+html[data-ra-theme="dark"] :is(#g-navigation, #g-offcanvas) .g-menu-item-container:hover {
+  color: var(--ra-link);
+  background: var(--ra-raised);
+}
+html[data-ra-theme="dark"] .g-offcanvas-toggle { color: var(--ra-mint); }
+html[data-ra-theme="dark"] #g-navigation .g-main-nav .g-toplevel > li:not(.g-menu-item-type-particle):not(.g-menu-item-type-module).active {
+  background: var(--ra-raised);
+}
+
+/* Retain the distinction between the branded sidebar headings. */
+html[data-ra-theme="dark"] .moduletable .g-title {
+  background: #404141;
+  color: #f5f7f4;
+}
+html[data-ra-theme="dark"] .moduletable.sunset .g-title {
+  background: #f08050;
+  color: #1c251f;
+}
+html[data-ra-theme="dark"] .moduletable.mintcake .g-title {
+  background: #9bc8ab;
+  color: #1c251f;
+}
+html[data-ra-theme="dark"] :is(.ramod_full, .ramod_outline, .well, .card, .alert) {
+  color: var(--ra-text);
+  background: var(--ra-surface);
+  border-color: var(--ra-border);
+}
+html[data-ra-theme="dark"] :is(.walkPublished, .nextwalk, .module-content) {
+  color: var(--ra-text);
+  background-color: transparent;
+}
+html[data-ra-theme="dark"] :is(#g-main, #g-sidebar1, #g-sidebar2, #g-fullwidth) :is(p, li, label, legend, td) {
+  color: var(--ra-text);
+}
+html[data-ra-theme="dark"] :is(#g-main, #g-sidebar1, #g-sidebar2, #g-fullwidth) :is(strong, b) {
+  color: inherit;
+}
+html[data-ra-theme="dark"] :is(.walkPublished, .pointer) { border-color: var(--ra-border); }
+html[data-ra-theme="dark"] .walkPublished:hover { background: var(--ra-raised); }
+
+html[data-ra-theme="dark"] :is(.btn, .button, .link-button, button:not(#ra-theme-toggle),
+  input[type="submit"], input[type="button"], .pagination .page-link):not(.festive-overlay-controls *) {
+  color: #17251c;
+  background: var(--ra-mint);
+  border-color: var(--ra-mint);
+  text-shadow: none;
+}
+html[data-ra-theme="dark"] :is(.btn, .button, .link-button, button:not(#ra-theme-toggle),
+  .pagination .page-link):not(.festive-overlay-controls *):hover {
+  color: #17251c;
+  background: #b5e0c2;
+}
+html[data-ra-theme="dark"] :is(input:not([type="submit"]):not([type="button"]), select, textarea):not(.festive-overlay-controls *) {
+  color: var(--ra-text);
+  background-color: var(--ra-surface);
+  border-color: var(--ra-border);
+  accent-color: var(--ra-mint);
+}
+html[data-ra-theme="dark"] ::placeholder { color: var(--ra-muted); opacity: 1; }
+html[data-ra-theme="dark"] :is(.text-muted, .article-info, .createdby, .published) { color: var(--ra-muted) !important; }
+html[data-ra-theme="dark"] :is(table, th, td, hr) { border-color: var(--ra-border); }
+html[data-ra-theme="dark"] :is(th, .table-striped tbody tr:nth-of-type(odd)) {
+  color: var(--ra-text);
+  background-color: var(--ra-surface);
+}
+html[data-ra-theme="dark"] :is(.table, .table td, .table th) { color: var(--ra-text); }
+/* Joomla/Bootstrap stripe colours are applied to cells, not just the row. */
+html[data-ra-theme="dark"] #g-main .table > :not(caption) > * > * {
+  color: var(--ra-text);
+  background: var(--ra-surface);
+  border-color: var(--ra-border);
+  box-shadow: none;
+}
+html[data-ra-theme="dark"] #g-main .table-striped > tbody > tr:nth-child(even) > * {
+  background: var(--ra-raised);
+}
+html[data-ra-theme="dark"] #g-main .table-striped > tbody > tr {
+  background: var(--ra-surface);
+}
+html[data-ra-theme="dark"] #g-main .table-hover > tbody > tr:hover > * {
+  background: #354b3e;
+}
+
+/* Ramblers walk-list widgets keep their own panel, row and filter colours. */
+html[data-ra-theme="dark"] #g-main :is(.ra.contentContainer, .paginatedList, .ra-walksfilter,
+  .cvList.filter, .walkstdfulldetails .walkitem, .cancelledWalks) {
+  color: var(--ra-text);
+  background: var(--ra-surface);
+  border-color: var(--ra-border);
+}
+html[data-ra-theme="dark"] #g-main .paginatedList :is(.odd, .even, td, th) {
+  color: var(--ra-text);
+  background: var(--ra-surface);
+  border-color: var(--ra-border);
+}
+html[data-ra-theme="dark"] #g-main .paginatedList .even { background: var(--ra-raised); }
+html[data-ra-theme="dark"] #g-main .paginatedList tr.even > td { background: var(--ra-raised); }
+html[data-ra-theme="dark"] #g-main .paginatedList :is(.odd, .even):hover,
+html[data-ra-theme="dark"] #g-main .paginatedList tr:hover > td { background: #354b3e; }
+html[data-ra-theme="dark"] #g-main .cvList.sortArrows img { filter: invert(1); }
+html[data-ra-theme="dark"] #g-main button.cvList.pagination.active {
+  background: #f9b104;
+  color: #17251c;
+}
+html[data-ra-theme="dark"] #g-main button.cvList.pagination.disabled {
+  background: var(--ra-raised);
+  color: var(--ra-muted);
+}
+html[data-ra-theme="dark"] #g-main .paginatedList :is(h3.ra.walk.month, tr.ra.walk.month, tr.ra.walk.month h3) {
+  color: var(--ra-mint);
+  background: #314339;
+}
+html[data-ra-theme="dark"] #g-main .ra.tabContainer > button {
+  color: var(--ra-text);
+  background: var(--ra-raised);
+  border-color: var(--ra-border);
+}
+html[data-ra-theme="dark"] #g-main .ra.tabContainer > button.active {
+  color: #17251c;
+  background: var(--ra-mint);
+  border-color: var(--ra-mint);
+}
+html[data-ra-theme="dark"] #g-main :is(details.ra-detailsButton > summary, .ra-filteritem) {
+  color: var(--ra-text);
+  background: var(--ra-raised);
+  border-color: var(--ra-border);
+}
+html[data-ra-theme="dark"] #g-main .ra-filteritem.active { color: #17251c; background: var(--ra-mint); }
+html[data-ra-theme="dark"] #g-main .walkstdfulldetails :is(.group, .walktitle) { color: var(--ra-text); }
+html[data-ra-theme="dark"] #g-main .fc {
+  --fc-page-bg-color: var(--ra-surface);
+  --fc-neutral-bg-color: var(--ra-raised);
+  --fc-neutral-text-color: var(--ra-text);
+  --fc-border-color: var(--ra-border);
+  --fc-list-event-hover-bg-color: var(--ra-raised);
+  --fc-today-bg-color: #314339;
+  --fc-event-bg-color: var(--ra-raised);
+  --fc-event-border-color: var(--ra-border);
+  --fc-event-text-color: var(--ra-text);
+}
+/* Ramblers adds a white table body and inline event colours on top of
+   FullCalendar's variables, so those surfaces need explicit overrides. */
+html[data-ra-theme="dark"] #g-main .fc :is(table.fc-scrollgrid tbody, .fc-list-table tbody) {
+  background: var(--ra-surface);
+}
+html[data-ra-theme="dark"] #g-main .fc :is(td, th) { border-color: var(--ra-border); }
+html[data-ra-theme="dark"] #g-main .fc .fc-event {
+  background-color: var(--ra-raised) !important;
+  border-color: var(--ra-border) !important;
+  color: var(--ra-text) !important;
+}
+html[data-ra-theme="dark"] #g-main .fc .fc-event-main {
+  color: var(--ra-text) !important;
+}
+html[data-ra-theme="dark"] #g-main .fc :is(.fc-event:hover, .ra.calendar.event:hover) {
+  background-color: #354b3e !important;
+}
+html[data-ra-theme="dark"] #g-main .fc :is(.fc-daygrid-day-number, .fc-col-header-cell-cushion) {
+  color: var(--ra-text);
+}
+html[data-ra-theme="dark"] #g-main .fc .fc-day-other .fc-daygrid-day-top { opacity: 1; }
+html[data-ra-theme="dark"] #g-main .fc .fc-day-other .fc-daygrid-day-number { color: var(--ra-muted); }
+html[data-ra-theme="dark"] #g-main .fc .fc-button-primary {
+  background: var(--ra-raised);
+  border-color: var(--ra-border);
+  color: var(--ra-text);
+}
+html[data-ra-theme="dark"] #g-main .fc .fc-button-primary:is(.fc-button-active, :hover) {
+  background: var(--ra-mint);
+  border-color: var(--ra-mint);
+  color: #17251c;
+}
+html[data-ra-theme="dark"] #g-main .fc .walkCancelled { color: var(--ra-hover) !important; }
+
+/* Prevent long URLs and wide images from forcing masonry articles outside
+   their columns. This structural correction applies in either theme. */
+html[data-ra-theme] .blog-items[class*="masonry-"] > .blog-item {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+html[data-ra-theme] .blog-item .item-content { min-width: 0; max-width: 100%; }
+html[data-ra-theme] .blog-item .item-content img { max-width: 100%; height: auto; }
+@media (max-width: 47.99rem) {
+  html[data-ra-theme] .blog-items[class*="masonry-"] { column-count: 1; }
+}
+html[data-ra-theme="dark"] :focus-visible {
+  outline: 3px solid #f9b104;
+  outline-offset: 3px;
+}
+html[data-ra-theme="dark"] ::selection { color: #17251c; background: #9bc8ab; }
+
+/* Map tiles, photos, partner logos and embedded documents are not inverted. */
+html[data-ra-theme="dark"] :is(.leaflet-popup-content-wrapper, .leaflet-popup-tip) {
+  background: var(--ra-surface);
+  color: var(--ra-text);
+}
+
+/* Leaflet's map controls and Ramblers' map captions have separate colours.
+   Preserve the map imagery and use mint tiles for the existing black icons. */
+html[data-ra-theme="dark"] #g-main :is(.leaflet-container, .ra-map-container) {
+  background-color: var(--ra-raised);
+}
+html[data-ra-theme="dark"] #g-main :is(.leaflet-control-attribution,
+  .leaflet-control-scale-line, .leaflet-control-layers, .mapcopyright, .ra-map-tools) {
+  background-color: var(--ra-surface);
+  color: var(--ra-text);
+  border-color: var(--ra-border);
+  text-shadow: none;
+}
+html[data-ra-theme="dark"] #g-main .leaflet-control-attribution a { color: var(--ra-link); }
+html[data-ra-theme="dark"] #g-main .marker-cluster :is(div, span) {
+  color: #17251c;
+}
+html[data-ra-theme="dark"] #g-main :is(.leaflet-bar a, .ra-map-tools-icon,
+  .leaflet-control-layers-toggle, .elevation-collapsed, .leaflet-control-resizer, #upload-icon) {
+  background-color: var(--ra-mint);
+  color: #17251c;
+  border-color: var(--ra-border);
+}
+html[data-ra-theme="dark"] #g-main .leaflet-bar a:hover { background-color: var(--ra-link); }
+html[data-ra-theme="dark"] #g-main .elevation:not(.elevation-collapsed) {
+  background-color: var(--ra-surface);
+  color: var(--ra-text);
+}
+html[data-ra-theme="dark"] #g-main .elevation text { fill: var(--ra-text); }
+html[data-ra-theme="dark"] #g-main .elevation :is(.axis path, .axis line) { stroke: var(--ra-muted); }
+
+/* Event Gallery's thumbnail frames and captions; image pixels stay intact. */
+html[data-ra-theme="dark"] #g-main :is(.event-thumbnail.img-thumbnail, .eventgallery-thumbnails .thumbnail) {
+  background-color: var(--ra-surface);
+  border-color: var(--ra-border);
+}
+
+
+}
