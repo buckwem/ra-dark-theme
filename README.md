@@ -1,5 +1,12 @@
 # RA Dark Theme
 
+A standalone Gantry template is now available as a local **0.2.0-beta1** build
+for Alton Ramblers. See [Gantry template installation](docs/gantry-template.md).
+The plugin described below is the earlier distribution; disable it when using
+the template. The template builder uses an administrator-supplied Hydrogen ZIP
+and does not publish the site-specific archive.
+
+
 A separate Joomla system plugin providing light and dark themes for Ramblers
 websites using the Gantry 5 Hydrogen template. It includes the colours reviewed
 on Alton Ramblers and the compact sun/moon icons used by Prodockit.

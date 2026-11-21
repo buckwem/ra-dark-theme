@@ -2,6 +2,7 @@
 
 Use natural British English. Preserve code identifiers and direct quotations.
 
+- Keep generated Gantry templates and administrator-supplied archives local in ignored build output. The reusable template builder belongs in `scripts/`, with authored integration code in `theme-source/`.
 - Keep Joomla plugin source in `extension/`, documentation in `docs/`, build
   utilities in `scripts/` and behaviour checks in `tests/`.
 - The repository name is `ra-dark-theme`; Joomla's system-plugin element is

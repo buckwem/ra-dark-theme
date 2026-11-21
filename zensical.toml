@@ -11,6 +11,7 @@ edit_uri = "edit/main/docs/"
 # Set site_url when the documentation is published.
 nav = [
   { "Overview" = "index.md" },
+  { "Gantry template" = "gantry-template.md" },
   { "Installation" = "installation.md" },
   { "Configuration" = "configuration.md" },
   { "Development" = "development.md" },

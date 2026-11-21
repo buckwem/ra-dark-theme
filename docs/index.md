@@ -1,5 +1,10 @@
 # RA Dark Theme
 
+For the new standalone template, see [Gantry template installation](gantry-template.md).
+It appears in Gantry Themes and includes the light/dark controls directly.
+The remaining pages describe the earlier system-plugin distribution.
+
+
 RA Dark Theme adds a light/dark switch to Ramblers websites using Gantry 5
 Hydrogen. It is a Joomla system plugin with its own assets and visitor settings.
 It is independent of Festive Overlay.
