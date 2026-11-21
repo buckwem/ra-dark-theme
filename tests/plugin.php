@@ -26,7 +26,7 @@ namespace Joomla\CMS\Event\Application {
     }
 }
 namespace Joomla\CMS\Uri {
-    class Uri { public static function root($pathOnly) { return '/subdirectory'; } }
+    class Uri { public static string $path = '/subdirectory'; public static function root($pathOnly) { return self::$path; } }
 }
 namespace Joomla\CMS\Language {
     class Text { public static function _($key) { return $key; } }
@@ -81,5 +81,14 @@ namespace {
     $doc = runPlugin(['default_theme'=>'dark','position'=>'bottom-left']);
     expect($doc->assets->scripts[0][3]['data-ra-default'] === 'dark', 'Early palette lost the configured default');
     expect($doc->options['plg_system_ra_darktheme']['position'] === 'bottom-left', 'Position setting was lost');
+    foreach (['', '/', '/subdirectory/'] as $root) {
+        \Joomla\CMS\Uri\Uri::$path = $root;
+        $doc = runPlugin();
+        $base = rtrim($root, '/') . '/media/plg_system_ra_darktheme/';
+        foreach (array_merge($doc->assets->styles, $doc->assets->scripts) as $asset) {
+            expect(str_starts_with($asset[1], $base), 'Incorrect root installation asset URL');
+            expect(!str_starts_with($asset[1], '//'), 'Asset URL became a hostname');
+        }
+    }
     echo "Passed public/document/template guards, settings, print isolation, dependencies and subdirectory URLs.\n";
 }

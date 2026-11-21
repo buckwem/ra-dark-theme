@@ -10,12 +10,12 @@ Other templates need their own style review. The plugin skips them by default.
 
 ## Install and enable
 
-1. Download `plg_system_ra_darktheme-0.1.0-beta1.zip` from the
-   [beta release](https://github.com/buckwem/ra-dark-theme/releases/tag/v0.1.0-beta1),
+1. Download `plg_system_ra_darktheme-0.1.0-beta2.zip` from the
+   [beta release](https://github.com/buckwem/ra-dark-theme/releases/tag/v0.1.0-beta2),
    or build it with `make package`. GitHub's automatic source archives are not
    Joomla installation packages.
 2. In Joomla, open **System → Install → Extensions** and upload
-   `plg_system_ra_darktheme-0.1.0-beta1.zip` (in `dist/` if built locally).
+   `plg_system_ra_darktheme-0.1.0-beta2.zip` (in `dist/` if built locally).
 3. Open **System → Manage → Plugins → System - RA Dark Theme**.
 4. Choose the default theme and switch position, then enable the plugin.
 5. Clear Joomla, Gantry and browser caches and check the pages used by your visitors.

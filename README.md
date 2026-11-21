@@ -4,15 +4,15 @@ A separate Joomla system plugin providing light and dark themes for Ramblers
 websites using the Gantry 5 Hydrogen template. It includes the colours reviewed
 on Alton Ramblers and the compact sun/moon icons used by Prodockit.
 
-**Version 0.1.0-beta1.** Intended for Joomla 5.4 and 6.x with PHP 8.3+. The browser
+**Version 0.1.0-beta2.** Intended for Joomla 5.4 and 6.x with PHP 8.3+. The browser
 behaviour and package are checked locally; installation, update and removal on
 real Joomla installations remain required before a production release.
 
 ## Download the beta
 
 Download the installable
-[RA Dark Theme 0.1.0-beta1 ZIP](https://github.com/buckwem/ra-dark-theme/releases/download/v0.1.0-beta1/plg_system_ra_darktheme-0.1.0-beta1.zip)
-from the [beta release](https://github.com/buckwem/ra-dark-theme/releases/tag/v0.1.0-beta1).
+[RA Dark Theme 0.1.0-beta2 ZIP](https://github.com/buckwem/ra-dark-theme/releases/download/v0.1.0-beta2/plg_system_ra_darktheme-0.1.0-beta2.zip)
+from the [beta release](https://github.com/buckwem/ra-dark-theme/releases/tag/v0.1.0-beta2).
 The release also includes this README as a separate download.
 Use the named plugin ZIP when installing in Joomla; GitHub's automatic source
 archives contain the development project and are not Joomla installation packages.
@@ -24,7 +24,7 @@ archives contain the development project and are not Joomla installation package
 | Repository | `ra-dark-theme` |
 | Joomla plugin | `System - RA Dark Theme` |
 | Joomla element / group | `ra_darktheme` / `system` |
-| Installable ZIP | `plg_system_ra_darktheme-0.1.0-beta1.zip` |
+| Installable ZIP | `plg_system_ra_darktheme-0.1.0-beta2.zip` |
 | Media directory | `media/plg_system_ra_darktheme/` |
 
 The repository prefix follows projects such as
@@ -74,9 +74,9 @@ sample Joomla script options. It is a static preview, not a Joomla installation.
 4. Remove the earlier prototype CSS and switch before enabling this plugin,
    clear Joomla/template/browser caches, and review the pages on your site.
 
-See the [installation guide](https://github.com/buckwem/ra-dark-theme/blob/v0.1.0-beta1/docs/installation.md),
-[configuration guide](https://github.com/buckwem/ra-dark-theme/blob/v0.1.0-beta1/docs/configuration.md)
-and [testing notes](https://github.com/buckwem/ra-dark-theme/blob/v0.1.0-beta1/docs/testing.md)
+See the [installation guide](https://github.com/buckwem/ra-dark-theme/blob/v0.1.0-beta2/docs/installation.md),
+[configuration guide](https://github.com/buckwem/ra-dark-theme/blob/v0.1.0-beta2/docs/configuration.md)
+and [testing notes](https://github.com/buckwem/ra-dark-theme/blob/v0.1.0-beta2/docs/testing.md)
 for scope, settings and the remaining integration checks.
 
 ## Source and development

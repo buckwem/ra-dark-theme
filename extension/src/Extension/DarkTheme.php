@@ -55,7 +55,7 @@ final class DarkTheme extends CMSPlugin implements SubscriberInterface
             ],
         ]);
 
-        $base = Uri::root(true) . '/media/plg_system_ra_darktheme/';
+        $base = rtrim(Uri::root(true), '/') . '/media/plg_system_ra_darktheme/';
         $assets = $document->getWebAssetManager();
         // Register late and give colour overrides a higher weight than template CSS.
         $assets->registerAndUseStyle('plg_system_ra_darktheme.theme', $base . 'css/theme.css',
