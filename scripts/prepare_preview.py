@@ -23,7 +23,7 @@ for path in target.rglob('*.html'):
         continue
     for element in soup.select('link[href],script[src]'):
         url = element.get('href', element.get('src', ''))
-        if any(name in url for name in ['alton-dark.css', 'preview-toggle.', 'tpl_ra_darktheme/']):
+        if any(name in url for name in ['alton-dark.css', 'preview-toggle.', '/ra-assets/']):
             element.decompose()
     soup.html.attrs.pop('data-alton-theme', None)
     soup.html.attrs.pop('data-ra-theme', None)

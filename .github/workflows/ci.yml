@@ -21,7 +21,7 @@ jobs:
         with:
           php-version: ${{ matrix.php }}
           coverage: none
-      - run: make lint-php test-php
+      - run: make lint-php test-php PYTHON=python3
 
   build:
     name: Package and documentation
@@ -41,7 +41,7 @@ jobs:
       - run: make check package docs
       - uses: actions/upload-artifact@v4
         with:
-          name: ra-dark-theme-development-package
+          name: ra-dark-theme-gantry-template
           path: dist/*.zip
           if-no-files-found: error
       - uses: actions/upload-artifact@v4
