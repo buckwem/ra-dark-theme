@@ -6,8 +6,7 @@ switch and the compact sun/moon icons used by [Prodockit](https://prodockit.org/
 The **0.2.0-beta3 Gantry template** was built from Alton Ramblers' Hydrogen
 5.6.7 template and retains its Ramblers layout, module positions, custom styling
 and Assistant font settings. It appears separately as **RA Dark Theme** in
-Gantry's Available Themes screen. The earlier **0.1.x system plugin** is a
-separate distribution.
+Gantry's Available Themes screen.
 
 This is an independent project, not an official Ramblers release.
 
@@ -29,9 +28,8 @@ Use **`tpl_ra_darktheme-0.2.0-beta3.zip`**, supplied separately for your site.
 The Alton Ramblers build includes administrator-supplied template customisations
 and remains local. It has not been attached to a public GitHub release.
 
-The older plugin ZIP in [GitHub Releases](https://github.com/buckwem/ra-dark-theme/releases)
-is not the Gantry template. GitHub's automatic source archives contain the
-development project and cannot be installed as a Joomla template.
+GitHub's automatic source archives contain the development project and cannot
+be installed as a Joomla template.
 
 ## Install the Gantry template
 
@@ -101,11 +99,10 @@ companion, not a required dependency. Check the seasonal effects in both modes.
 
 ```sh
 make setup
-make check lint-php test package docs
+make check lint-php test docs
 make docs-serve
 ```
 
-These commands check the shared code and build the earlier plugin package.
 To build the standalone template, provide the complete administrator-supplied
 Hydrogen template-folder ZIP:
 
@@ -123,14 +120,6 @@ or create sample menus. Generated templates and supplied archives stay out of Gi
 See the [Gantry template guide](docs/gantry-template.md) for installation details.
 Documentation uses Zensical and Prodockit styles. Run `make docs-serve` for a local
 preview at <http://127.0.0.1:8000>. No public documentation website is deployed.
-
-## Earlier system plugin
-
-The earlier plugin is **System - RA Dark Theme**, element `ra_darktheme` in the
-`system` group. Its source remains in `extension/` and its assets install under
-`media/plg_system_ra_darktheme/`. See the [plugin installation guide](docs/installation.md)
-and [plugin configuration](docs/configuration.md) if retaining Hydrogen with that
-separate distribution.
 
 ## Licence
 
