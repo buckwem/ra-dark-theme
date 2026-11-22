@@ -1,58 +1,103 @@
 # RA Dark Theme
 
-A standalone Gantry template is now available as a local **0.2.0-beta3** build
-for Alton Ramblers. See [Gantry template installation](docs/gantry-template.md).
-The plugin described below is the earlier distribution; disable it when using
-the template. The template builder uses an administrator-supplied Hydrogen ZIP
-and does not publish the site-specific archive.
+A Joomla/Gantry template for Ramblers websites, with a built-in light/dark
+switch and the compact sun/moon icons used by [Prodockit](https://prodockit.org/).
 
+The **0.2.0-beta3 Gantry template** was built from Alton Ramblers' Hydrogen
+5.6.7 template and retains its Ramblers layout, module positions, custom styling
+and Assistant font settings. It appears separately as **RA Dark Theme** in
+Gantry's Available Themes screen. The earlier **0.1.x system plugin** is a
+separate distribution.
 
-A separate Joomla system plugin providing light and dark themes for Ramblers
-websites using the Gantry 5 Hydrogen template. It includes the colours reviewed
-on Alton Ramblers and the compact sun/moon icons used by Prodockit.
+This is an independent project, not an official Ramblers release.
 
-**Version 0.1.0-beta2.** Intended for Joomla 5.4 and 6.x with PHP 8.3+. The browser
-behaviour and package are checked locally; installation, update and removal on
-real Joomla installations remain required before a production release.
+## Requirements and beta status
 
-## Download the beta
+The supplied site export reports Joomla 5.4.10 and Gantry 5.6.7. The project
+baseline is PHP 8.3 or later. Joomla 6.x remains a development target requiring
+integration testing. Back up the website and test the template on a staging copy.
 
-Download the installable
-[RA Dark Theme 0.1.0-beta2 ZIP](https://github.com/buckwem/ra-dark-theme/releases/download/v0.1.0-beta2/plg_system_ra_darktheme-0.1.0-beta2.zip)
-from the [beta release](https://github.com/buckwem/ra-dark-theme/releases/tag/v0.1.0-beta2).
-The release also includes this README as a separate download.
-Use the named plugin ZIP when installing in Joomla; GitHub's automatic source
-archives contain the development project and are not Joomla installation packages.
+The template has been installed and previewed on Alton Ramblers. The default
+appearance, switch and menu-assignment workflow have been checked there.
+Local checks cover PHP syntax, configuration, browser behaviour, packaging and
+documentation. Update, removal and wider compatibility checks remain necessary
+before a production release.
 
-## Names
+## Obtain the installer
 
-| Purpose | Name |
-| --- | --- |
-| Repository | `ra-dark-theme` |
-| Joomla plugin | `System - RA Dark Theme` |
-| Joomla element / group | `ra_darktheme` / `system` |
-| Installable ZIP | `plg_system_ra_darktheme-0.1.0-beta2.zip` |
-| Media directory | `media/plg_system_ra_darktheme/` |
+Use **`tpl_ra_darktheme-0.2.0-beta3.zip`**, supplied separately for your site.
+The Alton Ramblers build includes administrator-supplied template customisations
+and remains local. It has not been attached to a public GitHub release.
 
-The repository prefix follows projects such as
-[ramblerswebs/ra-tools](https://github.com/ramblerswebs/ra-tools).
-This is an independent extension, not an official Ramblers release.
+The older plugin ZIP in [GitHub Releases](https://github.com/buckwem/ra-dark-theme/releases)
+is not the Gantry template. GitHub's automatic source archives contain the
+development project and cannot be installed as a Joomla template.
 
-## Features
+## Install the Gantry template
 
-- Device preference, light or dark default, with saved visitor choices.
-- Small 18-pixel sun/moon icons, 32-pixel visible button and a 44-pixel pointer
-  target beside the title; optional fixed corner positions.
-- Dark article, contact-table, walks-list, calendar, mobile-menu, gallery-frame
-  and map-control colours. Original font families and image colours are retained.
-- Optional colour matching for an existing WeatherWidget.io forecast.
-- Original print colours; no dark styling on administrator, component-only,
-  non-HTML or non-matching template pages.
+1. Back up the site and keep Hydrogen installed for rollback.
+2. Open **System → Install → Extensions → Upload Package File** and upload
+   `tpl_ra_darktheme-0.2.0-beta3.zip`. Use Joomla's installer, rather than Gantry's
+   Import control. For an upgrade, upload the newer ZIP without uninstalling.
+3. Open **Components → Gantry 5 Themes → Available Themes → RA Dark Theme**.
+   Confirm that its version is **0.2.0-beta3** or later.
+4. Review the Ramblers layout and preview the template. Previewing alone does
+   not change the template used by the normal public URLs.
 
-It has no Festive Overlay dependency. The existing festive runtime can detect
-the new page background when both plugins are installed.
+## Set the default appearance
 
-## Build and preview
+1. In RA Dark Theme, choose **Base Outline** from the outline dropdown.
+2. Open **Page Settings** and locate **RA Dark Theme**.
+3. Set **Default theme** to **Light**, **Dark** or **Device preference**.
+4. Click **Save Page Settings**.
+
+Light is a suitable choice when you want the usual light appearance initially;
+visitors can use the switch to select dark mode. The template's initial fallback
+is Dark until configured. Saved visitor choices override the default. Test a
+changed default in a fresh private window. Clearing Joomla's cache does not
+clear browser preferences.
+
+An individual outline can override the Base Outline. To make such a change,
+select that outline and enable the field's override checkbox before saving.
+
+## Activate the template on the public site
+
+1. Open **System → Templates → Site Template Styles**.
+2. Find **RA Dark Theme – Default** and make it the site default using its star
+   or the **Default** toolbar button.
+3. Under **Menus → Main Menu**, open existing menu items that explicitly select
+   Hydrogen. In **Details → Template Style**, select **Use Default**, then
+   **Save & Close**.
+4. Repeat for all affected menu items, including Home, News, Gallery, Contacts
+   and the walks pages. Check other menus if the site has them.
+5. Refresh the normal public URLs and check the layout and switch on desktop
+   and mobile, including the calendar and weather widget.
+
+A menu item's explicit template assignment overrides the site default. On
+Alton Ramblers, Home and Gallery changed successfully after their menu items
+were set to **Use Default**. Changing Home does not change the other menu items.
+Use this verified menu-item route when migrating existing assignments; clearing
+or selecting all items in Gantry Assignments was not a reliable migration route
+in the site checks.
+
+If using Gantry's default-template dropdown, **All Languages** means the general
+site default. A language-specific selection such as **English (UK)** is a
+different assignment; it should not replace the general default inadvertently.
+
+## Roll back
+
+Keep Hydrogen installed. Restore **Hydrogen – Default** as the site default
+and restore any explicit menu assignments needed by the original configuration.
+Menu items set to **Use Default** will follow the restored default. Retain the
+backup until the replacement has been fully checked.
+
+## Festive Overlay
+
+[Festive Overlay](https://github.com/buckwem/festive-extension) can be installed
+separately. It works with light or dark appearance; RA Dark Theme is a recommended
+companion, not a required dependency. Check the seasonal effects in both modes.
+
+## Build and documentation
 
 ```sh
 make setup
@@ -60,52 +105,36 @@ make check lint-php test package docs
 make docs-serve
 ```
 
-The installer is generated in `dist/`; documentation is generated in `site/`.
-The pinned documentation tools are Zensical and Prodockit. To test the browser
-assets on a local copy without installing Joomla:
+These commands check the shared code and build the earlier plugin package.
+To build the standalone template, provide the complete administrator-supplied
+Hydrogen template-folder ZIP:
 
 ```sh
-.venv/bin/python scripts/prepare_preview.py --source ../alton-dark-mode-prototype/.local-site
-make preview
+.venv/bin/python scripts/build_gantry_theme.py \
+  --source /path/to/g5_hydrogen.zip \
+  --output dist/gantry-build
 ```
 
-Open <http://127.0.0.1:8768/>. This uses the plugin's shipped browser files and
-sample Joomla script options. It is a static preview, not a Joomla installation.
+Use a fresh output directory. The builder retains site customisations, converts
+the source outline to a portable base outline, removes compiled CSS and backup
+files, and gives the template its own identity. It does not import a database
+or create sample menus. Generated templates and supplied archives stay out of Git.
 
-## Install on a staging site
+See the [Gantry template guide](docs/gantry-template.md) for installation details.
+Documentation uses Zensical and Prodockit styles. Run `make docs-serve` for a local
+preview at <http://127.0.0.1:8000>. No public documentation website is deployed.
 
-1. Upload the downloaded or locally built plugin ZIP through **System → Install → Extensions**.
-2. Open **System → Manage → Plugins → System - RA Dark Theme** and enable it.
-3. Check the default theme, switch position and template folder. The template
-   defaults to `g5_hydrogen`.
-4. Remove the earlier prototype CSS and switch before enabling this plugin,
-   clear Joomla/template/browser caches, and review the pages on your site.
+## Earlier system plugin
 
-See the [installation guide](https://github.com/buckwem/ra-dark-theme/blob/v0.1.0-beta2/docs/installation.md),
-[configuration guide](https://github.com/buckwem/ra-dark-theme/blob/v0.1.0-beta2/docs/configuration.md)
-and [testing notes](https://github.com/buckwem/ra-dark-theme/blob/v0.1.0-beta2/docs/testing.md)
-for scope, settings and the remaining integration checks.
-
-## Source and development
-
-The source is maintained on `main` in
-[the public repository](https://github.com/buckwem/ra-dark-theme).
-For a fresh clone:
-
-```sh
-git clone git@github.com:buckwem/ra-dark-theme.git
-cd ra-dark-theme
-make setup
-```
-
-GitHub Actions checks PHP, JavaScript, packaging and documentation.
-Beta installers are distributed through GitHub Releases. Updates currently use
-manual ZIP uploads in Joomla; there is no update server yet. The documentation
-source is available in this repository, but a public documentation website has
-not been deployed. Add its URL to `zensical.toml` once that destination exists.
+The earlier plugin is **System - RA Dark Theme**, element `ra_darktheme` in the
+`system` group. Its source remains in `extension/` and its assets install under
+`media/plg_system_ra_darktheme/`. See the [plugin installation guide](docs/installation.md)
+and [plugin configuration](docs/configuration.md) if retaining Hydrogen with that
+separate distribution.
 
 ## Licence
 
-GPL-2.0-or-later. Lucide/Feather icon notices are included in
-`extension/THIRD_PARTY_NOTICES.txt`. Site photographs, logos, videos and copied
-page content are excluded from the source repository and installer.
+Authored project code and documentation are GPL-2.0-or-later. Hydrogen and its
+customisations retain their original notices. Lucide/Feather icon notices are
+included in `extension/THIRD_PARTY_NOTICES.txt`. Site-specific template assets
+remain in the local build and are excluded from the public source repository.
