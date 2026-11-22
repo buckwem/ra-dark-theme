@@ -1,60 +1,29 @@
 # Development
 
-## Set up and check
-
-Install Python 3.13, Node.js 22 or later, and PHP 8.3 or later:
+The complete installable Gantry source is in `template/`. The manifest
+`template/templateDetails.xml` owns the package version. Keep both Gantry theme
+metadata files consistent and preserve upstream notices.
 
 ```sh
 make setup
 make check lint-php test package docs
 ```
 
-The build uses the version in `extension/ra_darktheme.xml` and includes only its
-declared files. Archive order, permissions and timestamps are deterministic.
-`dist/`, `site/`, local previews and test output are ignored by Git.
+The deterministic package builder validates the manifest and builds the template
+ZIP without an external archive. GitHub Actions checks PHP 8.3/8.4, JavaScript,
+packaging and the strict Zensical/Prodockit documentation build.
 
-## Joomla integration
+The template boots Gantry and loads `includes/ra-theme.php` before rendering.
+This reads the active outline's `page.ra-theme` settings and registers assets
+through Joomla's Web Asset Manager with absolute URLs. An early bootstrap sets
+the palette; the deferred runtime reads `tpl_ra_darktheme` script options.
 
-The service provider registers `DarkTheme` as a system plugin. Its event
-subscriber handles `onBeforeCompileHead`, checks the application, document and
-template, then registers assets through Web Asset Manager. Styles use a higher
-weight than normal template CSS. Asset URLs support subdirectory installations.
+Run `make docs-serve` to preview the documentation. Prodockit owns the managed
+pdk styles and JavaScript; custom styles belong in `docs/stylesheets/extra.css`.
+Use `make docs-assets` to refresh the managed assets.
 
-The small bootstrap script is synchronous and independent of Joomla's core
-JavaScript. Its validated default is passed as an HTML data attribute. The
-deferred main script depends on Joomla core and reads normal script options.
-The plugin uses no inline executable script or runtime CDN dependency.
-
-The namespace is `RADarkTheme\Plugin\System\RaDarktheme`, and the element is
-`ra_darktheme`. Keep the namespace, provider and manifest consistent.
-
-## Documentation
-
-Zensical and Prodockit are pinned in `requirements-docs.txt`. Managed styles and
-scripts are checked before a strict documentation build. Put local styling in
-`docs/stylesheets/extra.css`; run `make docs-assets` after deliberately changing
-the Prodockit pin. `make docs-serve` serves the guide on localhost port 8000.
-
-GitHub Actions is prepared for PHP syntax/behaviour checks and browser-runtime,
-package and documentation checks. The repository URL is configured; add the site URL to `zensical.toml` when
-documentation is published.
-
-## Local public-site preview
-
-```sh
-.venv/bin/python scripts/prepare_preview.py --source ../alton-dark-mode-prototype/.local-site
-make preview
-```
-
-The helper copies an existing static mirror into ignored `.local-site/`, removes
-the prototype theme assets and installs the shipped plugin assets with sample
-Joomla options. It defaults to dark mode for review. Existing source content
-security rules remain in place. It performs no network mirroring and copies no
-Joomla database or administrator credentials.
-
-## Sources
-
-- [Joomla plugin tutorial](https://manual.joomla.org/docs/building-extensions/plugins/basic-content-plugin/)
-- [Joomla Web Asset Manager](https://manual.joomla.org/docs/general-concepts/web-asset-manager/)
-- [Ramblers naming example](https://github.com/ramblerswebs/ra-tools)
-- [Prodockit icon reference](https://prodockit.org/)
+For a static preview, run `scripts/prepare_preview.py --source PATH` with a
+separate local page mirror, then `make preview`. It does not execute Joomla.
+Test installation, updates, removal, menu assignment and dynamic widgets on a
+Joomla staging copy. Keep website mirrors, credentials and compiled caches out
+of Git.

@@ -34,7 +34,7 @@ namespace {
             $theme = new class { public function setLayout() {} };
             \Joomla\CMS\Factory::$app = $app;
             \Joomla\CMS\Uri\Uri::$root = $root;
-            require __DIR__ . '/../theme-source/includes/ra-theme.php';
+            require __DIR__ . '/../template/includes/ra-theme.php';
             expect($app->doc->options['defaultTheme'] === ($default === 'invalid' ? 'system' : $default), 'Incorrect default');
             expect(!$app->doc->options['showToggle'] && !$app->doc->options['weather'], 'Settings lost');
             foreach (array_merge($app->doc->assets->styles, $app->doc->assets->scripts) as $asset) {

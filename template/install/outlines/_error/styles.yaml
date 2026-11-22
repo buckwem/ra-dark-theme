@@ -1,0 +1,67 @@
+preset: preset1
+base:
+  background: '#f2f2f2'
+  text-color: '#1c1c1c'
+  body-font: family=Assistant
+  heading-font: 'family=Assistant:700'
+accent:
+  color-1: '#404141'
+navigation:
+  background: '#404141'
+  text-color: '#FFFFFF'
+  submenu-color: '#404141'
+  activemenu-color: '#F08050'
+analytics:
+  background: '#ffffff'
+  text-color: '#1c1c1c'
+bottom:
+  background: '#f2f2f2'
+  text-color: '#1c1c1c'
+copyright:
+  background: '#404141'
+debug:
+  background: '#ffffff'
+  text-color: '#1c1c1c'
+drawer:
+  background: '#ffffff'
+  text-color: '#1c1c1c'
+extension:
+  background: '#f2f2f2'
+  text-color: '#1c1c1c'
+feature:
+  background: '#f2f2f2'
+  text-color: '#1c1c1c'
+footer:
+  background: '#404141'
+  text-color: '#ffffff'
+fullwidth:
+  background: '#f2f2f2'
+  text-color: '#1c1c1c'
+header:
+  background: '#f2f2f2'
+  text-color: '#1c1c1c'
+main:
+  background: '#f2f2f2'
+  text-color: '#1c1c1c'
+mainbottom:
+  background: '#f2f2f2'
+  text-color: '#1c1c1c'
+maintop:
+  background: '#f0f0f0'
+  text-color: '#1c1c1c'
+showcase:
+  background: '#f2f2f2'
+  text-color: '#1c1c1c'
+subfeature:
+  background: '#f2f2f2'
+  text-color: '#1c1c1c'
+top:
+  background: '#ffffff'
+  text-color: '#1c1c1c'
+utility:
+  background: '#f2f2f2'
+  text-color: '#1c1c1c'
+breakpoints:
+  desktop-container: 75rem
+  tablet-container: 51rem
+  mobile-menu-breakpoint: 51rem

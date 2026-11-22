@@ -3,8 +3,8 @@ const {test} = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
-const bootstrap = fs.readFileSync('extension/media/js/bootstrap.js', 'utf8');
-const source = fs.readFileSync('extension/media/js/theme.js', 'utf8');
+const bootstrap = fs.readFileSync('template/ra-assets/js/bootstrap.js', 'utf8');
+const source = fs.readFileSync('template/ra-assets/js/theme.js', 'utf8');
 
 function runtime({config={enabled:true, defaultTheme:'system'}, saved=null, dark=false,
   storageBlocked=false, heading=true, ready='complete', weather=false}={}) {

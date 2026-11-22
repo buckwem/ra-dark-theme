@@ -10,15 +10,11 @@ setup:
 check:
 	$(PYTHON) scripts/build_package.py --check
 lint-php:
-	$(PHP_BIN) -r 'exit(PHP_VERSION_ID >= 80300 ? 0 : 1);'
-	$(PHP_BIN) -l extension/services/provider.php
-	$(PHP_BIN) -l extension/src/Extension/DarkTheme.php
-	$(PHP_BIN) -l theme-source/includes/ra-theme.php
+	$(PYTHON) scripts/lint_php.py --php "$(PHP_BIN)"
 test: test-js test-php
 test-js:
 	$(NODE) --test tests/theme.test.cjs
 test-php:
-	$(PHP_BIN) tests/plugin.php
 	$(PHP_BIN) tests/template.php
 package:
 	$(PYTHON) scripts/build_package.py

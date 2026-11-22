@@ -1,15 +1,16 @@
 # Configuration
 
-Open **System → Manage → Plugins → System - RA Dark Theme**.
+Open **Components → Gantry 5 Themes → Available Themes → RA Dark Theme**.
+Select **Base Outline → Page Settings → RA Dark Theme**.
 
-| Setting | Default | Effect |
+| Setting | Initial value | Effect |
 | --- | --- | --- |
-| Joomla status | Disabled after a fresh installation | Enable to load the plugin on matching public pages. |
-| Default theme | Device preference | Follow the operating system, or start in light/dark mode. A saved visitor choice takes precedence. |
-| Show light/dark switch | Yes | Show the compact icon button. Hiding it retains any existing visitor preference. |
-| Switch position | Beside site title | Use `#ramblerstitle`; fall back to bottom right if missing. Fixed bottom-left/right positions are also available. |
-| Match weather widget colours | Yes | Theme an existing WeatherWidget.io forecast; do not create or download one. |
-| Template folder | `g5_hydrogen` | Limit the plugin to the reviewed template. Blank allows other templates after their styles have been adapted and tested. |
+| Default theme | Dark | Choose Light, Dark or Device preference; saved visitor choices take precedence. |
+| Show light/dark switch | Yes | Show the compact button beside the site title, with a corner fallback. |
+| Match weather widget colours | Yes | Match an existing WeatherWidget.io forecast to the current palette. |
+
+Click **Save Page Settings**. A specific outline can override inherited settings.
+Enable its override checkbox before saving an outline-specific choice.
 
 ## Visitor choices
 
@@ -33,7 +34,7 @@ print styling. Photos, logos, map tiles and embedded documents keep their
 original colours. White image backgrounds are not recoloured.
 
 The Walking Environment column correction also applies in light mode while
-the plugin is active. Long URLs wrap and wide article images stay within their
+the template is active. Long URLs wrap and wide article images stay within their
 columns.
 
 Weather matching restores the widget's original colour attributes in light

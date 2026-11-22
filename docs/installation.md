@@ -1,39 +1,83 @@
 # Installation
 
-## Requirements
+RA Dark Theme **0.2.0-beta4** is a complete Joomla/Gantry template, with the
+light/dark switch built in. Its Joomla folder is `ra_darktheme`; the installer
+is `tpl_ra_darktheme-0.2.0-beta4.zip`. It appears separately from Hydrogen in
+**Components → Gantry 5 → Themes**.
 
-- Joomla 5.4 or 6.x with PHP 8.3 or later, pending integration qualification.
-- A Ramblers website using the Gantry 5 Hydrogen template (`g5_hydrogen`).
-- A staging copy on which to review your site's content and interactive widgets.
+This build is based on Alton Ramblers' administrator-supplied Hydrogen
+5.6.7 template. It retains its Ramblers layout, module positions, Assistant font
+settings, custom menu rendering and SCSS. The source site's active outline 12
+becomes a portable base outline; Joomla/Gantry allocates a new template style ID.
+Existing modules, articles and media stay in Joomla. The installer does not
+import a database or create sample menus.
 
-Other templates need their own style review. The plugin skips them by default.
+## Template requirements
 
-## Install and enable
+Joomla 5.4 and Gantry 5.6.7 are the versions reported in the supplied export.
+PHP 8.3 or later is the project baseline. Actual installation and Gantry SCSS
+compilation still require verification on a Joomla staging site. This is a beta,
+not a qualified production replacement.
 
-1. Download `plg_system_ra_darktheme-0.1.0-beta2.zip` from the
-   [beta release](https://github.com/buckwem/ra-dark-theme/releases/tag/v0.1.0-beta2),
-   or build it with `make package`. GitHub's automatic source archives are not
-   Joomla installation packages.
-2. In Joomla, open **System → Install → Extensions** and upload
-   `plg_system_ra_darktheme-0.1.0-beta2.zip` (in `dist/` if built locally).
-3. Open **System → Manage → Plugins → System - RA Dark Theme**.
-4. Choose the default theme and switch position, then enable the plugin.
-5. Clear Joomla, Gantry and browser caches and check the pages used by your visitors.
+Download the [Gantry template ZIP](https://github.com/buckwem/ra-dark-theme/releases/download/v0.2.0-beta4/tpl_ra_darktheme-0.2.0-beta4.zip)
+from the [beta release](https://github.com/buckwem/ra-dark-theme/releases/tag/v0.2.0-beta4).
 
-Remove the earlier standalone `alton-dark.css` and `preview-toggle` assets before
-enabling this plugin. Those prototype files use different identifiers and would
-otherwise create a second switch. Festive Overlay can remain enabled.
+## Install and preview
 
-The plugin installs files under `plugins/system/ra_darktheme/` and
-`media/plg_system_ra_darktheme/`. It does not change the template or the database
-schema. Joomla stores the plugin settings as normal extension parameters.
+1. Back up the website and retain Hydrogen for rollback.
+2. Upload **tpl_ra_darktheme-0.2.0-beta4.zip** through
+   **System → Install → Extensions**. Installation should leave Hydrogen assigned.
+3. Find **RA Dark Theme** in **Components → Gantry 5 → Themes**. Open its
+   default outline, check the Ramblers layout and use **Save Styles** to compile
+   its CSS if necessary.
+4. In Gantry, select **Base Outline**, open **Page Settings**, and find the
+   **RA Dark Theme** section. Set **Default theme** to **Dark**, **Light** or
+   **Device preference**, then click **Save Page Settings**. You can also enable
+   or hide the switch and enable weather colour matching here. New installations
+   default to Dark. A specific outline can override inherited page settings;
+   enable its override checkbox before saving an outline-specific choice.
+5. Preview it before making it the default. Check Home, Contacts, Current Walks
+   including its calendar, galleries, menus and the mobile layout. Check Festive
+   Overlay separately when its effects are enabled.
+6. When satisfied, make the RA Dark Theme style the site default. Existing
+   menu-specific assignments to Hydrogen can still override the default. Under
+   **Menus → Main Menu**, open each affected item and set
+   **Details → Template Style → Use Default**, then **Save & Close**.
+   This was verified for Home and Gallery on Alton Ramblers.
+7. Clear Joomla/Gantry/browser caches and check both themes again.
 
-## Update or remove
+To roll back, restore the original Hydrogen template style as the default and
+restore any menu assignments changed during testing. Keep Hydrogen installed.
 
-Upload a newer ZIP to update the plugin. Its manifest uses Joomla's upgrade
-method. There is no update server yet.
+## Build locally
 
-Disable the plugin to stop loading its assets on subsequent page loads. Remove
-it through **System → Manage → Extensions** if it is no longer required.
-Clear cached pages after either operation. Visitor preferences remain in their
-browser storage but have no effect while the plugin is absent.
+The complete source is in `template/`. Run `make package` to build the installer
+from its manifest. No external template archive is needed. The package retains
+the Ramblers layout and supplies portable outlines so Joomla can allocate its
+own template style IDs. Compiled CSS and backup files are excluded.
+
+## Verification limits
+
+Package identity, manifest contents, portable outline configuration, asset URL
+construction and PHP syntax can be checked locally. The browser runtime reuses
+the tested light/dark code. A static website mirror cannot prove Joomla
+installation, Gantry outline creation, CSS compilation or template assignment.
+These require the staging checks above.
+
+## Instructions for webmasters
+
+To change the default appearance:
+
+1. Open **Components → Gantry 5 Themes → RA Dark Theme**.
+2. Select **Base Outline** to set the default across the template.
+3. Open **Page Settings** and locate **RA Dark Theme**.
+4. Choose **Default theme → Dark**, **Light**, or **Device preference**.
+5. Click **Save Page Settings** and refresh a page using this template.
+
+The default applies when the visitor has not saved a choice. Test defaults in
+an anonymous/private browser window, or use the switch to choose the appearance
+for your current browser. Clearing Joomla's cache does not clear a visitor's
+saved browser preference. Review outline overrides if only some pages change.
+
+When upgrading, upload the current ZIP without uninstalling,
+then configure appearance using the Gantry Page Settings controls.

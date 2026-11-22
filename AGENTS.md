@@ -2,18 +2,13 @@
 
 Use natural British English. Preserve code identifiers and direct quotations.
 
-- Keep generated Gantry templates and administrator-supplied archives local in ignored build output. The reusable template builder belongs in `scripts/`, with authored integration code in `theme-source/`.
-- Keep Joomla plugin source in `extension/`, documentation in `docs/`, build
-  utilities in `scripts/` and behaviour checks in `tests/`.
-- The repository name is `ra-dark-theme`; Joomla's system-plugin element is
-  `ra_darktheme`. Keep its manifest, namespace and provider consistent.
-- Keep this extension independent of Festive Overlay. Do not bundle public-site
-  snapshots, photographs, videos, administrator data or credentials.
-- Target Joomla 5.4 and 6.x with PHP 8.3+. Describe support as provisional until
-  installation, update and removal have been checked on real Joomla sites.
-- Use service providers, event subscribers and Web Asset Manager APIs.
-- Preserve keyboard operation, visitor preferences, original fonts and photos.
+- This repository contains a complete Joomla/Gantry site template, `ra_darktheme`.
+- Keep installable source in `template/`, documentation in `docs/`, build tools in `scripts/` and checks in `tests/`.
+- The version in `template/templateDetails.xml` owns the package version. Keep both Gantry theme metadata files consistent.
+- `make package` must build only `tpl_ra_darktheme-VERSION.zip` from the declared template files.
+- Preserve the supplied Ramblers layout, font settings and module positions. Retain upstream copyright notices.
+- Keep Festive Overlay separate. Do not include website snapshots, database exports, credentials, videos or compiled caches.
+- Template source and its supplied custom assets are authorised for this repository; the original administrator archive stays local.
 - Run `make check lint-php test package docs` when applicable.
-- Prodockit owns `docs/stylesheets/pdk*.css` and `docs/javascripts/pdk.js`.
-  Put custom documentation styles in `docs/stylesheets/extra.css`.
+- Prodockit owns `docs/stylesheets/pdk*.css` and `docs/javascripts/pdk.js`. Put custom styles in `docs/stylesheets/extra.css`.
 - Do not use Playwright.

@@ -1,0 +1,90 @@
+preset: preset1
+base:
+  background: '#ffffff'
+  text-color: '#1c1c1c'
+  body-font: family=Assistant
+  heading-font: 'family=Assistant:700'
+  font-size: 14px
+accent:
+  color-1: '#3c6bfa'
+  color-2: '#F6B09D'
+navigation:
+  background: '#404141'
+  text-color: '#ffffff'
+  submenu-color: '#404141'
+  activemenu-color: '#f08050'
+  font-size: 15px
+  overlay: 'rgba(0, 0, 0, 0.4)'
+analytics:
+  background: '#ffffff'
+  text-color: '#1c1c1c'
+bottom:
+  background: '#ffffff'
+  text-color: '#1c1c1c'
+  bottom: ''
+copyright:
+  background: '#404141'
+  text-color: '#ffffff'
+debug:
+  background: '#ffffff'
+  text-color: '#1c1c1c'
+drawer:
+  background: '#ffffff'
+  text-color: '#1c1c1c'
+extension:
+  background: '#ffffff'
+  text-color: '#1c1c1c'
+feature:
+  background: '#ffffff'
+  text-color: '#1c1c1c'
+footer:
+  background: '#404141'
+  text-color: '#ffffff'
+fullwidth:
+  background: '#ffffff'
+  text-color: '#1c1c1c'
+header:
+  background: '#ffffff'
+  text-color: '#1c1c1c'
+main:
+  background: '#ffffff'
+  text-color: '#1c1c1c'
+  font-size: 15px
+mainbottom:
+  background: '#ffffff'
+  text-color: '#1c1c1c'
+maintop:
+  background: '#e3e3e3'
+  text-color: '#1c1c1c'
+showcase:
+  background: '#ffffff'
+  text-color: '#1c1c1c'
+subfeature:
+  background: '#ffffff'
+  text-color: '#1c1c1c'
+top:
+  background: '#ffffff'
+  text-color: '#1c1c1c'
+utility:
+  background: '#ffffff'
+  text-color: '#1c1c1c'
+breakpoints:
+  desktop-container: 75rem
+  tablet-container: 51rem
+  mobile-menu-breakpoint: 51rem
+  large-desktop-container: 95rem
+  large-mobile-container: 30rem
+menustyle:
+  text-color: '#ffffff'
+  text-color-alt: '#8e9dab'
+  text-color-active: 'rgba(255,255,255, 0.7)'
+  background-active: '#F6B09D'
+  sublevel-text-color: '#ffffff'
+  sublevel-text-color-active: '#ffffff'
+  sublevel-background: '#000000'
+  sublevel-background-active: '#F6B09D'
+font:
+  family-default: Assistant
+offcanvas:
+  background: '#354d59'
+  text-color: '#ffffff'

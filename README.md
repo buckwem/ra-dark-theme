@@ -3,7 +3,7 @@
 A Joomla/Gantry template for Ramblers websites, with a built-in light/dark
 switch and the compact sun/moon icons used by [Prodockit](https://prodockit.org/).
 
-The **0.2.0-beta3 Gantry template** was built from Alton Ramblers' Hydrogen
+The **0.2.0-beta4 Gantry template** was built from Alton Ramblers' Hydrogen
 5.6.7 template and retains its Ramblers layout, module positions, custom styling
 and Assistant font settings. It appears separately as **RA Dark Theme** in
 Gantry's Available Themes screen.
@@ -24,8 +24,8 @@ before a production release.
 
 ## Obtain the installer
 
-Download **[tpl_ra_darktheme-0.2.0-beta3.zip](https://github.com/buckwem/ra-dark-theme/releases/download/v0.2.0-beta3/tpl_ra_darktheme-0.2.0-beta3.zip)**
-from the [Gantry beta release](https://github.com/buckwem/ra-dark-theme/releases/tag/v0.2.0-beta3).
+Download **[tpl_ra_darktheme-0.2.0-beta4.zip](https://github.com/buckwem/ra-dark-theme/releases/download/v0.2.0-beta4/tpl_ra_darktheme-0.2.0-beta4.zip)**
+from the [Gantry beta release](https://github.com/buckwem/ra-dark-theme/releases/tag/v0.2.0-beta4).
 The release also includes this README. This build contains Alton Ramblers'
 Hydrogen customisations; other sites should review and adapt the layout before use.
 
@@ -36,10 +36,10 @@ be installed as a Joomla template.
 
 1. Back up the site and keep Hydrogen installed for rollback.
 2. Open **System → Install → Extensions → Upload Package File** and upload
-   `tpl_ra_darktheme-0.2.0-beta3.zip`. Use Joomla's installer, rather than Gantry's
+   `tpl_ra_darktheme-0.2.0-beta4.zip`. Use Joomla's installer, rather than Gantry's
    Import control. For an upgrade, upload the newer ZIP without uninstalling.
 3. Open **Components → Gantry 5 Themes → Available Themes → RA Dark Theme**.
-   Confirm that its version is **0.2.0-beta3** or later.
+   Confirm that its version is **0.2.0-beta4** or later.
 4. Review the Ramblers layout and preview the template. Previewing alone does
    not change the template used by the normal public URLs.
 
@@ -100,26 +100,16 @@ companion, not a required dependency. Check the seasonal effects in both modes.
 
 ```sh
 make setup
-make check lint-php test docs
+make check lint-php test package docs
 make docs-serve
 ```
 
-To build the standalone template, provide the complete administrator-supplied
-Hydrogen template-folder ZIP:
+The complete installable source is in `template/`. `make package` builds
+`dist/tpl_ra_darktheme-0.2.0-beta4.zip` directly from the declared files in
+`template/templateDetails.xml`. No external archive is needed. Compiled caches,
+website mirrors and build output stay out of Git.
 
-```sh
-.venv/bin/python scripts/build_gantry_theme.py \
-  --source /path/to/g5_hydrogen.zip \
-  --output dist/gantry-build
-```
-
-Use a fresh output directory. The builder retains site customisations, converts
-the source outline to a portable base outline, removes compiled CSS and backup
-files, and gives the template its own identity. It does not import a database
-or create sample menus. Generated templates and supplied archives stay out of the Git source tree;
-reviewed installers are distributed as GitHub release attachments.
-
-See the [Gantry template guide](docs/gantry-template.md) for installation details.
+See the [Gantry template guide](docs/installation.md) for installation details.
 Documentation uses Zensical and Prodockit styles. Run `make docs-serve` for a local
 preview at <http://127.0.0.1:8000>. No public documentation website is deployed.
 
@@ -127,5 +117,6 @@ preview at <http://127.0.0.1:8000>. No public documentation website is deployed.
 
 Authored project code and documentation are GPL-2.0-or-later. Hydrogen and its
 customisations retain their original notices. Lucide/Feather icon notices are
-included in `extension/THIRD_PARTY_NOTICES.txt`. The template release contains the supplied template assets; they remain
-excluded from the Git source tree.
+included in `template/THIRD_PARTY_NOTICES.txt`. Supplied template customisations
+and assets are included in the source and release. Database exports, website
+snapshots and credentials are excluded.

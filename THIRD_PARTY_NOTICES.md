@@ -29,7 +29,11 @@ SOFTWARE.
 
 ## Sun and moon icons
 
-The extension uses the Lucide/Feather sun and moon SVG paths used by
+The theme uses the Lucide/Feather sun and moon SVG paths used by
 [prodockit.org](https://prodockit.org/), retrieved on 21 November 2026.
-Their ISC and MIT notices are preserved in `extension/THIRD_PARTY_NOTICES.txt`
+Their ISC and MIT notices are preserved in `template/THIRD_PARTY_NOTICES.txt`
 and included in the installer.
+
+## Hydrogen and Ramblers source
+
+Original GPL and copyright notices are retained in the supplied template files.

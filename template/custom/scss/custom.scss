@@ -1,0 +1,179 @@
+/* Change log                                                            */
+/*                                                                      */
+:root {
+    /* Ramblers colours */
+    /* 2021  */
+    --mintCake:#9BC8AB;
+    --sunset:#F08050;
+    --granite:#404141;
+    --rosyCheeks:#F6B09D;
+    --sunrise: #F9B104;
+    --cloudy:#FFFFFF;
+    /* June 2017 -  */
+    --pantone0110:#D7A900;
+    --pantone0159:#C75B12;
+    --pantone0186:#C60C30;           
+    --pantone0555:#206C49;           
+    --pantone0583:#A8B400;           
+    --pantone1815:#782327;           
+    --pantone4485:#5B491F;           
+    --pantone5565:#8BA69C;           
+    --pantone7474:#007A87;           
+}
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&display=swap');
+@import "dependencies";
+
+@import "ramblers/icons";
+@import "ramblers/link";
+@import "ramblers/modules";
+@import "ramblers/tables";
+@import "ramblers/raheader";
+
+body {
+    font-size: $main-font-size;
+}
+
+h1, h2, h3, h4, h5, h6 { margin: 0 0 15px 0; }
+
+h2 {
+    font-size: 175%;
+}
+
+h3 {
+    font-size: 140%;
+}
+
+div.nextwalk {
+    margin-bottom: 5px;
+}
+
+p { margin: 0 0 15px 0 ;}
+
+p, a {
+    word-wrap: break-word ;
+}
+
+#g-main {
+    padding: 0px;
+}
+
+#g-top {
+    h1#ramblerstitle {
+        margin-top: 0px;
+    }
+}
+
+.g-offcanvas-toggle {
+    color: $navigation-submenu-color;
+}
+
+#rafooter {
+    width: 100%;
+    display: -webkit-flex;
+    -webkit-justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.cancelled {
+    color:var(--cancelled);
+    text-decoration: line-through;
+}
+
+.preformat {
+    background: none repeat scroll 0 0 #ffffd5;
+    border-left: 5px solid #404040;
+    padding: 1em;
+}
+.text-highlight {
+    background: none repeat scroll 0 0 #ffffaa;
+    padding: 0.2em 0.5em;
+}
+
+/* =============== LAYOUT - OVERALL PAGE =============== */
+/* Hide Jguard footer */
+
+span#sgfooter {
+    display: none;
+}
+
+legend.hidelabeltxt {
+    display: none;
+}
+/* class to hide sections*/
+
+.ramblers-remove {
+    display: none;
+    padding: 0px;
+}
+
+@media only screen and (max-width: 768px){
+    div#ramblersheader {
+        background-image:none !important;
+    }
+}
+
+div.ra_fullwidth {
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: bottom;
+}
+
+/* enable RokNavMenu menu to be displayed */
+@media (max-width: 767px) {
+    .gf-menu-device-container.responsive-type-panel ~ ul.gf-menu {
+        display: initial;
+    }
+}
+
+/* Kunena forum user status*/
+div.userkunenalistempty {
+    color: var(--pantone1815);
+    font-weight: 900
+}
+
+div.userkunenalist {
+    color: #000000;
+}
+
+ul.userkunenacatorgories li {
+    color:   var(--pantone0555);
+    list-style-type: square;
+    font-weight: 800
+}
+/* fix for JSN Uniform date input */
+.jsn-daterangepicker  {
+    width: calc(50% - 44px);
+}
+section#g-top {
+    div.g-block div.g-content {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    h2#ramblerssubtitle {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 160px ;
+        margin-right: 0px ;
+        padding: 0 0 0 0;
+    }
+    div#ramblersheader {
+        height: 100px ;
+    }
+}
+
+.button
+{
+    @include main-nav-colors($navigation-background, $navigation-text-color, $main-background, $main-text-color);
+    color: $navigation-text-color;
+}
+
+.plg_system_webauthn_login_button svg {
+    width: 30px;
+    margin: 4px;
+    }

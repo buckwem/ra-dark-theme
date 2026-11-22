@@ -1,0 +1,466 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: Ramblers
+  timestamp: 1737319745
+layout:
+  /top/:
+    -
+      - 'position-top-a 17'
+      - 'position-top-b 16'
+      - 'position-top-c 17'
+      - 'position-top-d 17'
+      - 'position-top-e 16'
+      - 'position-top-f 17'
+  /header/:
+    -
+      - 'position-header-a 17'
+      - 'position-header-b 16'
+      - 'position-header-c 17'
+      - 'position-header-d 17'
+      - 'position-header-e 16'
+      - 'position-header-f 17'
+  /drawer/:
+    -
+      - position-drawer
+  /navigation/:
+    -
+      - menu-4524
+  /system-messages/:
+    -
+      - system-messages-2089
+  /showcase/:
+    -
+      - 'position-showcase-a 17'
+      - 'position-showcase-b 16'
+      - 'position-showcase-c 17'
+      - 'position-showcase-d 17'
+      - 'position-showcase-e 16'
+      - 'position-showcase-f 17'
+  /feature/:
+    -
+      - 'position-feature-a 17'
+      - 'position-feature-b 16'
+      - 'position-feature-c 17'
+      - 'position-feature-d 17'
+      - 'position-feature-e 16'
+      - 'position-feature-f 17'
+  /utility/:
+    -
+      - 'position-utility-a 17'
+      - 'position-utility-b 16'
+      - 'position-utility-c 17'
+      - 'position-utility-d 17'
+      - 'position-utility-e 16'
+      - 'position-utility-f 17'
+  /breadcrumb/:
+    -
+      - position-breadcrumb
+  /maintop/:
+    -
+      - 'position-maintop-a 17'
+      - 'position-maintop-b 16'
+      - 'position-maintop-c 17'
+      - 'position-maintop-d 17'
+      - 'position-maintop-e 16'
+      - 'position-maintop-f 17'
+  /fullwidth/:
+    -
+      - position-full-width
+  /container-mainbody/:
+    -
+      -
+        'sidebar1 25':
+          -
+            - position-sidebar-a
+      -
+        'main 50':
+          -
+            - 'position-content-top-a 33'
+            - 'position-content-top-b 34'
+            - 'position-content-top-c 33'
+          -
+            - system-content-2222
+          -
+            - 'position-content-bottom-a 33'
+            - 'position-content-bottom-b 34'
+            - 'position-content-bottom-c 33'
+      -
+        'sidebar2 25':
+          -
+            - 'position-sidebar-b 50'
+            - 'position-sidebar-c 50'
+  /mainbottom/:
+    -
+      - 'position-mainbottom-a 17'
+      - 'position-mainbottom-b 16'
+      - 'position-mainbottom-c 17'
+      - 'position-mainbottom-d 17'
+      - 'position-mainbottom-e 16'
+      - 'position-mainbottom-f 17'
+  /extension/:
+    -
+      - 'position-extension-a 17'
+      - 'position-extension-b 16'
+      - 'position-extension-c 17'
+      - 'position-extension-d 17'
+      - 'position-extension-e 16'
+      - 'position-extension-f 17'
+  /bottom/:
+    -
+      - 'position-bottom-a 17'
+      - 'position-bottom-b 16'
+      - 'position-bottom-c 17'
+      - 'position-bottom-d 17'
+      - 'position-bottom-e 16'
+      - 'position-bottom-f 17'
+  /footer/:
+    -
+      - 'position-footer-a 17'
+      - 'position-footer-b 16'
+      - 'position-footer-c 17'
+      - 'position-footer-d 17'
+      - 'position-footer-e 16'
+      - 'position-footer-f 17'
+  /copyright/:
+    -
+      - 'position-copyright-a 17'
+      - 'position-copyright-b 16'
+      - 'position-copyright-c 17'
+      - 'position-copyright-d 17'
+      - 'position-copyright-e 16'
+      - 'position-copyright-f 17'
+  /debug/:
+    -
+      - position-debug
+  /analytics/:
+    -
+      - position-analytics
+  offcanvas:
+    -
+      - mobile-menu-7806
+structure:
+  top:
+    type: section
+    attributes:
+      boxed: ''
+  header:
+    attributes:
+      boxed: ''
+  drawer:
+    type: section
+    attributes:
+      boxed: ''
+  navigation:
+    type: section
+    attributes:
+      boxed: ''
+  system-messages:
+    type: section
+    attributes:
+      boxed: ''
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
+  feature:
+    type: section
+    attributes:
+      boxed: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+  breadcrumb:
+    type: section
+    attributes:
+      boxed: ''
+  maintop:
+    type: section
+    attributes:
+      boxed: ''
+  fullwidth:
+    type: section
+    attributes:
+      boxed: ''
+  sidebar1:
+    subtype: aside
+    type: section
+    block:
+      fixed: 1
+  sidebar2:
+    subtype: aside
+    type: section
+    block:
+      fixed: 1
+  container-mainbody:
+    attributes:
+      boxed: ''
+  mainbottom:
+    type: section
+    attributes:
+      boxed: ''
+  extension:
+    type: section
+    attributes:
+      boxed: ''
+  bottom:
+    type: section
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+  copyright:
+    type: section
+    attributes:
+      boxed: ''
+  debug:
+    type: section
+    attributes:
+      boxed: ''
+  analytics:
+    type: section
+    attributes:
+      boxed: ''
+content:
+  position-top-a:
+    attributes:
+      key: top-a
+  position-top-b:
+    attributes:
+      key: top-b
+  position-top-c:
+    attributes:
+      key: top-c
+  position-top-d:
+    attributes:
+      key: top-d
+  position-top-e:
+    attributes:
+      key: top-e
+  position-top-f:
+    attributes:
+      key: top-f
+  position-header-a:
+    attributes:
+      key: header-a
+  position-header-b:
+    attributes:
+      key: header-b
+  position-header-c:
+    attributes:
+      key: header-c
+  position-header-d:
+    attributes:
+      key: header-d
+  position-header-e:
+    attributes:
+      key: header-e
+  position-header-f:
+    attributes:
+      key: header-f
+  position-drawer:
+    attributes:
+      key: drawer
+  position-showcase-a:
+    attributes:
+      key: showcase-a
+  position-showcase-b:
+    attributes:
+      key: showcase-b
+  position-showcase-c:
+    attributes:
+      key: showcase-c
+  position-showcase-d:
+    attributes:
+      key: showcase-d
+  position-showcase-e:
+    attributes:
+      key: showcase-e
+  position-showcase-f:
+    attributes:
+      key: showcase-f
+  position-feature-a:
+    attributes:
+      key: feature-a
+  position-feature-b:
+    attributes:
+      key: feature-b
+  position-feature-c:
+    attributes:
+      key: feature-c
+  position-feature-d:
+    attributes:
+      key: feature-d
+  position-feature-e:
+    attributes:
+      key: feature-e
+  position-feature-f:
+    attributes:
+      key: feature-f
+  position-utility-a:
+    attributes:
+      key: utility-a
+  position-utility-b:
+    attributes:
+      key: utility-b
+  position-utility-c:
+    attributes:
+      key: utility-c
+  position-utility-d:
+    attributes:
+      key: utility-d
+  position-utility-e:
+    attributes:
+      key: utility-e
+  position-utility-f:
+    attributes:
+      key: utility-f
+  position-breadcrumb:
+    attributes:
+      key: breadcrumb
+  position-maintop-a:
+    attributes:
+      key: maintop-a
+  position-maintop-b:
+    attributes:
+      key: maintop-b
+  position-maintop-c:
+    attributes:
+      key: maintop-c
+  position-maintop-d:
+    attributes:
+      key: maintop-d
+  position-maintop-e:
+    attributes:
+      key: maintop-e
+  position-maintop-f:
+    attributes:
+      key: maintop-f
+  position-full-width:
+    attributes:
+      key: full-width
+  position-sidebar-a:
+    attributes:
+      key: sidebar-a
+  position-content-top-a:
+    attributes:
+      key: content-top-a
+  position-content-top-b:
+    attributes:
+      key: content-top-b
+  position-content-top-c:
+    attributes:
+      key: content-top-c
+  position-content-bottom-a:
+    attributes:
+      key: content-bottom-a
+  position-content-bottom-b:
+    attributes:
+      key: content-bottom-b
+  position-content-bottom-c:
+    attributes:
+      key: content-bottom-c
+  position-sidebar-b:
+    attributes:
+      key: sidebar-b
+  position-sidebar-c:
+    attributes:
+      key: sidebar-c
+  position-mainbottom-a:
+    attributes:
+      key: mainbottom-a
+  position-mainbottom-b:
+    attributes:
+      key: mainbottom-b
+  position-mainbottom-c:
+    attributes:
+      key: mainbottom-c
+  position-mainbottom-d:
+    attributes:
+      key: mainbottom-d
+  position-mainbottom-e:
+    attributes:
+      key: mainbottom-e
+  position-mainbottom-f:
+    attributes:
+      key: mainbottom-f
+  position-extension-a:
+    attributes:
+      key: extension-a
+  position-extension-b:
+    attributes:
+      key: extension-b
+  position-extension-c:
+    attributes:
+      key: extension-c
+  position-extension-d:
+    attributes:
+      key: extension-d
+  position-extension-e:
+    attributes:
+      key: extension-e
+  position-extension-f:
+    attributes:
+      key: extension-f
+  position-bottom-a:
+    attributes:
+      key: bottom-a
+  position-bottom-b:
+    attributes:
+      key: bottom-b
+  position-bottom-c:
+    attributes:
+      key: bottom-c
+  position-bottom-d:
+    attributes:
+      key: bottom-d
+  position-bottom-e:
+    attributes:
+      key: bottom-e
+  position-bottom-f:
+    attributes:
+      key: bottom-f
+  position-footer-a:
+    attributes:
+      key: footer-a
+  position-footer-b:
+    attributes:
+      key: footer-b
+  position-footer-c:
+    attributes:
+      key: footer-c
+  position-footer-d:
+    attributes:
+      key: footer-d
+  position-footer-e:
+    attributes:
+      key: footer-e
+  position-footer-f:
+    attributes:
+      key: footer-f
+  position-copyright-a:
+    attributes:
+      key: copyright-a
+  position-copyright-b:
+    attributes:
+      key: copyright-b
+  position-copyright-c:
+    attributes:
+      key: copyright-c
+  position-copyright-d:
+    attributes:
+      key: copyright-d
+  position-copyright-e:
+    attributes:
+      key: copyright-e
+  position-copyright-f:
+    attributes:
+      key: copyright-f
+  position-debug:
+    attributes:
+      key: debug
+  position-analytics:
+    attributes:
+      key: analytics
