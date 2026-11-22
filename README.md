@@ -24,9 +24,10 @@ before a production release.
 
 ## Obtain the installer
 
-Use **`tpl_ra_darktheme-0.2.0-beta3.zip`**, supplied separately for your site.
-The Alton Ramblers build includes administrator-supplied template customisations
-and remains local. It has not been attached to a public GitHub release.
+Download **[tpl_ra_darktheme-0.2.0-beta3.zip](https://github.com/buckwem/ra-dark-theme/releases/download/v0.2.0-beta3/tpl_ra_darktheme-0.2.0-beta3.zip)**
+from the [Gantry beta release](https://github.com/buckwem/ra-dark-theme/releases/tag/v0.2.0-beta3).
+The release also includes this README. This build contains Alton Ramblers'
+Hydrogen customisations; other sites should review and adapt the layout before use.
 
 GitHub's automatic source archives contain the development project and cannot
 be installed as a Joomla template.
@@ -115,7 +116,8 @@ Hydrogen template-folder ZIP:
 Use a fresh output directory. The builder retains site customisations, converts
 the source outline to a portable base outline, removes compiled CSS and backup
 files, and gives the template its own identity. It does not import a database
-or create sample menus. Generated templates and supplied archives stay out of Git.
+or create sample menus. Generated templates and supplied archives stay out of the Git source tree;
+reviewed installers are distributed as GitHub release attachments.
 
 See the [Gantry template guide](docs/gantry-template.md) for installation details.
 Documentation uses Zensical and Prodockit styles. Run `make docs-serve` for a local
@@ -125,5 +127,5 @@ preview at <http://127.0.0.1:8000>. No public documentation website is deployed.
 
 Authored project code and documentation are GPL-2.0-or-later. Hydrogen and its
 customisations retain their original notices. Lucide/Feather icon notices are
-included in `extension/THIRD_PARTY_NOTICES.txt`. Site-specific template assets
-remain in the local build and are excluded from the public source repository.
+included in `extension/THIRD_PARTY_NOTICES.txt`. The template release contains the supplied template assets; they remain
+excluded from the Git source tree.

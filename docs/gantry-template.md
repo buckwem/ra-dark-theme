@@ -5,7 +5,7 @@ light/dark switch built in. Its Joomla folder is `ra_darktheme`; the installer
 is `tpl_ra_darktheme-0.2.0-beta3.zip`. It appears separately from Hydrogen in
 **Components → Gantry 5 → Themes**.
 
-This local build is based on Alton Ramblers' administrator-supplied Hydrogen
+This build is based on Alton Ramblers' administrator-supplied Hydrogen
 5.6.7 template. It retains its Ramblers layout, module positions, Assistant font
 settings, custom menu rendering and SCSS. The source site's active outline 12
 becomes a portable base outline; Joomla/Gantry allocates a new template style ID.
@@ -18,6 +18,9 @@ Joomla 5.4 and Gantry 5.6.7 are the versions reported in the supplied export.
 PHP 8.3 or later is the project baseline. Actual installation and Gantry SCSS
 compilation still require verification on a Joomla staging site. This is a beta,
 not a qualified production replacement.
+
+Download the [Gantry template ZIP](https://github.com/buckwem/ra-dark-theme/releases/download/v0.2.0-beta3/tpl_ra_darktheme-0.2.0-beta3.zip)
+from the [beta release](https://github.com/buckwem/ra-dark-theme/releases/tag/v0.2.0-beta3).
 
 ## Install and preview
 
@@ -86,6 +89,6 @@ an anonymous/private browser window, or use the switch to choose the appearance
 for your current browser. Clearing Joomla's cache does not clear a visitor's
 saved browser preference. Review outline overrides if only some pages change.
 
-When upgrading from beta1 or beta2, upload the beta3 ZIP without uninstalling,
+When upgrading, upload the current ZIP without uninstalling,
 then use these Gantry controls. Earlier Joomla template-style default parameters
 are superseded by the Gantry Page Settings controls.
