@@ -17,3 +17,15 @@ pause/resume, on/off and palette changes. Static checks do not qualify PHP
 execution, Gantry compilation or all dynamic states. Some gallery images are
 missing from the mirror. Wider installation, update, removal, mobile, keyboard,
 print, calendar, form, gallery and map checks remain necessary on staging.
+
+Beta5 corrects walk-details dialogs appended outside the main
+page container. A local browser check confirmed dark text panels, and a focused
+check using the map library's stylesheet confirmed that map information boxes
+retain their light background and dark text. Weather colour matching was also
+observed working in Safari after enabling it in the local preview. Some map
+tiles and marker images are missing from the static mirror; map imagery needs
+verification on the installed site.
+
+The site maintainer subsequently confirmed the beta5 installer working on the
+target site. Wider Joomla/Gantry compatibility and update/removal checks remain
+necessary before a production release.

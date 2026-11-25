@@ -1,8 +1,8 @@
 # Installation
 
-RA Dark Theme **0.2.0-beta4** is a complete Joomla/Gantry template, with the
+RA Dark Theme **0.2.0-beta5** is a complete Joomla/Gantry template, with the
 light/dark switch built in. Its Joomla folder is `ra_darktheme`; the installer
-is `tpl_ra_darktheme-0.2.0-beta4.zip`. It appears separately from Hydrogen in
+is `tpl_ra_darktheme-0.2.0-beta5.zip`. It appears separately from Hydrogen in
 **Components → Gantry 5 → Themes**.
 
 This build is based on Alton Ramblers' administrator-supplied Hydrogen
@@ -19,13 +19,13 @@ PHP 8.3 or later is the project baseline. Actual installation and Gantry SCSS
 compilation still require verification on a Joomla staging site. This is a beta,
 not a qualified production replacement.
 
-Download the [Gantry template ZIP](https://github.com/buckwem/ra-dark-theme/releases/download/v0.2.0-beta4/tpl_ra_darktheme-0.2.0-beta4.zip)
-from the [beta release](https://github.com/buckwem/ra-dark-theme/releases/tag/v0.2.0-beta4).
+Download the [Gantry template ZIP](https://github.com/buckwem/ra-dark-theme/releases/download/v0.2.0-beta5/tpl_ra_darktheme-0.2.0-beta5.zip)
+from the [beta release](https://github.com/buckwem/ra-dark-theme/releases/tag/v0.2.0-beta5).
 
 ## Install and preview
 
 1. Back up the website and retain Hydrogen for rollback.
-2. Upload **tpl_ra_darktheme-0.2.0-beta4.zip** through
+2. Upload **tpl_ra_darktheme-0.2.0-beta5.zip** through
    **System → Install → Extensions**. Installation should leave Hydrogen assigned.
 3. Find **RA Dark Theme** in **Components → Gantry 5 → Themes**. Open its
    default outline, check the Ramblers layout and use **Save Styles** to compile

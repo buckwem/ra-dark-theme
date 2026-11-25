@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <extension version="3.9" type="template" client="site" method="upgrade">
     <name>ra_darktheme</name>
-    <version>0.2.0-beta4</version>
+    <version>0.2.0-beta5</version>
     <creationDate>November 4, 2026</creationDate>
     <author>Tiger12, LLC</author>
     <authorEmail>gantry@tiger12.com</authorEmail>

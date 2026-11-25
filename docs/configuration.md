@@ -30,8 +30,9 @@ An external bootstrap script applies the saved choice before the body renders.
 The main script adds the switch after the document is ready.
 
 Dark CSS is restricted to screen media, so printing uses the site's original
-print styling. Photos, logos, map tiles and embedded documents keep their
-original colours. White image backgrounds are not recoloured.
+print styling. Photos, logos, map tiles, map controls, map information boxes
+and embedded documents keep their original colours. Walk-details dialogs use
+dark panels and readable text around the unchanged map. White image backgrounds are not recoloured.
 
 The Walking Environment column correction also applies in light mode while
 the template is active. Long URLs wrap and wide article images stay within their

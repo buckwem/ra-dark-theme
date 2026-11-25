@@ -3,7 +3,7 @@
 A Joomla/Gantry template for Ramblers websites, with a built-in light/dark
 switch and the compact sun/moon icons used by [Prodockit](https://prodockit.org/).
 
-The **0.2.0-beta4 Gantry template** was built from Alton Ramblers' Hydrogen
+The **0.2.0-beta5 Gantry template** was built from Alton Ramblers' Hydrogen
 5.6.7 template and retains its Ramblers layout, module positions, custom styling
 and Assistant font settings. It appears separately as **RA Dark Theme** in
 Gantry's Available Themes screen.
@@ -24,8 +24,8 @@ before a production release.
 
 ## Obtain the installer
 
-Download **[tpl_ra_darktheme-0.2.0-beta4.zip](https://github.com/buckwem/ra-dark-theme/releases/download/v0.2.0-beta4/tpl_ra_darktheme-0.2.0-beta4.zip)**
-from the [Gantry beta release](https://github.com/buckwem/ra-dark-theme/releases/tag/v0.2.0-beta4).
+Download **[tpl_ra_darktheme-0.2.0-beta5.zip](https://github.com/buckwem/ra-dark-theme/releases/download/v0.2.0-beta5/tpl_ra_darktheme-0.2.0-beta5.zip)**
+from the [Gantry beta release](https://github.com/buckwem/ra-dark-theme/releases/tag/v0.2.0-beta5).
 The release also includes this README. This build contains Alton Ramblers'
 Hydrogen customisations; other sites should review and adapt the layout before use.
 
@@ -36,10 +36,10 @@ be installed as a Joomla template.
 
 1. Back up the site and keep Hydrogen installed for rollback.
 2. Open **System → Install → Extensions → Upload Package File** and upload
-   `tpl_ra_darktheme-0.2.0-beta4.zip`. Use Joomla's installer, rather than Gantry's
+   `tpl_ra_darktheme-0.2.0-beta5.zip`. Use Joomla's installer, rather than Gantry's
    Import control. For an upgrade, upload the newer ZIP without uninstalling.
 3. Open **Components → Gantry 5 Themes → Available Themes → RA Dark Theme**.
-   Confirm that its version is **0.2.0-beta4** or later.
+   Confirm that its version is **0.2.0-beta5** or later.
 4. Review the Ramblers layout and preview the template. Previewing alone does
    not change the template used by the normal public URLs.
 
@@ -105,7 +105,7 @@ make docs-serve
 ```
 
 The complete installable source is in `template/`. `make package` builds
-`dist/tpl_ra_darktheme-0.2.0-beta4.zip` directly from the declared files in
+`dist/tpl_ra_darktheme-0.2.0-beta5.zip` directly from the declared files in
 `template/templateDetails.xml`. No external archive is needed. Compiled caches,
 website mirrors and build output stay out of Git.
 
